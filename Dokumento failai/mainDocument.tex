@@ -29,7 +29,15 @@
 
 
 %keywords and notations if needed
-\sectionWithoutNumber{Sutartinis terminų žodynas}{keywords}{Pateikiamas terminų sąrašas (jei reikia)}
+\sectionWithoutNumber{Sutartinis terminų žodynas}{FTP}{
+	
+	FTP - \textit{File Transfer protocol}, protokolas leidžiantis .
+	
+	Buf{}fer overflow - tai viena iš potencialių rizikų, kai dėl per didelio kiekio duomenų, informacija yra perrašoma gretimuose atminties blokuose.
+	
+	SSH - \textit{Secure Shell}, tai tinklo protokolas kuris leidžia vartotojui saugiai pasiekti sistemą per nesaugu tinklą.
+
+}
 
  %both abstracts
 \bothabstracts{\input{abstract}}%tex-file of abstract in original language
@@ -69,35 +77,83 @@ Pateikiamas trečio lygio poskyrio tekstas.
 Pateikiamas trečio lygio poskyrio tekstas.
 
 
-\subsection{Statinė spragų analizė}
+\subsection{Statinė kodo analizė}
 \label{sec:example}
 
-\subsubsection{Example}
-\label{sec:data}
-Pateikiamas trečio lygio poskyrio tekstas.
 
-\subsection{Dinaminė spragų analizė}
+\subsubsection{Panaudojimas}
+\label{sec:data}
+Statinė analizė suteikia galimybę gauti informacijos apie galimą programos elgesį programos vykdymo metu, nevykdant programos.
+Statinės analizės metodai tiria programos elgesį su visomis įmanomomis įvestimis ir visomis įmanomomis programos būsenomis, kurias programa gali pasiekti.
+
+Atlikus teisingai statinę analizę, galima aptikti akivaiždžias klaidas kurių programuotojas galėjo nepastebėti, tai sutaupo laiko bei sumažina spragų kiekį, taip pat galimai aptinkami nenumatyti scenarijai. Kaikurios programavimo aplinkos (Visual Studio, IntelliJ...) atlieka pastovią statine analizę tam, kad programuotojai pamatytų potencialias klaidas prieš sistemos startą.
+
+Statinė analizė padeda aptikti:
+\begin{itemize}
+	\item Neicijuotus kintamuosius;
+	\item Potencialias klaidas sistemos išeities kode;
+	\item Buf{}fer overflow spragas;
+\end{itemize}
+
+\subsubsection{Panaudojimas darbe}
+\label{sec:data}
+Vartotojui davus FTP serverio adresą ir iš jo atsisiuntus sistemos išeities kodą bus atliekama statinė analizė ir taip bandoma aptikti scenarijus, kuriuose sistemą būtų galima sugadinti, ar į ją isilaužti. 
+\subsection{Dinaminė kodo analizė}
 \label{sec:example}
 
-\subsubsection{Example}
-\label{sec:data}
-Pateikiamas trečio lygio poskyrio tekstas.
 
-\subsection{Išorinių spragų skanavimas}
+\subsubsection{Panaudojimas}
+\label{sec:data}
+Dinaminė analizė vykdoma kai programa jau yra vykdomo stadijoje. Dinaminės analizės paskirtis yra aptikti atminties nutekėjimus, null rodykles. Dynaminės analizės metu bandoma igyvendinti visus įmanomus scenarijus ir išbandyti visas imanomas variacijas į programos ivestį.
+
+Veikimo metu programa gali neatlaisvinti atminties atgal į operacinę sistemą, to pasekoje serveris kuriame programa veikia, pritruks atminties ir pradės veikti lečiau kol galiausiai sustos. Nuo to padėtų apsaugoti dinaminė analizė, atlikus ją teisingai, galima aptikti didžiają dalį spragų kurios potencialiai labiausiai įtakos sistemą. Jas ištaisius, sistema veikimo stabilumas padidėja, nenumatytų atvejų skaičius pamažėja.
+
+Dinaminė analizė padeda aptikti:
+\begin{itemize}
+	\item Atminties nutekėjimus;
+	\item Netikėtus scenarijus;
+	\item Opiausias spragas;
+\end{itemize}
+
+\subsubsection{Panaudojimas darbe}
+\label{sec:data}
+Analizės metu, bus bandoma į visas sistemos įvestis pateikti nenumatytu reikšmių taip išbandant kuo daugiau nenumatytų scenarijų.
+
+\subsection{Išorinių spragų skenavimas}
 \label{sec:example}
 
-\subsubsection{Example}
-\label{sec:data}
-Pateikiamas trečio lygio poskyrio tekstas.
+\subsubsection{Panaudojimas}
+Išorinis pažeidžiamumų skenavimas atliekamas iš sistemos tinklo išorės, o pagrindinis jo tikslas yra aptikti perimetro gynybos spragas, pvz., atvirus atvirus tinklo užkardos prievadus ar specializuotą žiniatinklio programų užkardą. Išorinis pažeidžiamumų skenavimas gali padėti organizacijoms išspręsti saugumo problemas, kurios įsilaužėliams galėtų suteikti prieigą prie organizacijos tinklo.
+\newline
+Išorinis pažeidžiamumų skenavimas aptiks:
+\begin{itemize}
+	\item Didžiausios tiesioginės grėsmės sistemoje;
+	\item Programinę įrangą kuriai reikia atnaujinimų bei priežiuros;
+	\item Atidaryti prievadus ir protokolus - įėjimo taškus į sistemos tinklą;
+\end{itemize}
 
-\subsection{Vidinių spragų skanavimas}
+\subsubsection{Panaudojimas darbe}
+\label{sec:data}
+Testavimo įrankyje bus implementuota prievadų skanavimo funkcija, taip pat bus bandoma išgauti kuo daugiau informacijos apie pačią sistemą.
+
+\subsection{Vidinių pažeidžiamumų skenavimas}
 \label{sec:example}
 
-\subsubsection{Example}
-\label{sec:data}
-Pateikiamas trečio lygio poskyrio tekstas.
+\subsubsection{Panaudojimas}
+Vidinis pažeidžiamumo patikrinimas atliekamas iš organizacijos perimetro gynybos. Jos tikslas yra aptikti pažeidžiamumus, kuriuos galėtų išnaudoti įsilaužėliai arba nepatenkinti darbuotojai, sėkmingai įsiskverbiantys į perimetro gynybą, arba turintys teisėtą prieigą prie organizacijos tinklo.
 
-\subsection{Aplinkos spragų skanavimas}
+Vidinių pažeidžiamumų skenavimas aptiks:
+\begin{itemize}
+	\item Sistemos komponentus kurie galimai gali sukelti gresmę;
+	\item Pasenusi programinė įranga, kuriai reikia atnaujinimų;
+	\item ...;
+\end{itemize}
+
+\subsubsection{Panaudojimas darbe}
+\label{sec:data}
+Įrankio vartotojas savo noru gali pateikti prisijungimus prie sistemos, taip pat SSH adresą. Pasinaudojus šia informaciją įrankis prisijungs prie sistemos, ir bandys išgauti kuo daugiau informacijos, bei aptikti joje spragas.
+
+\subsection{Aplinkos spragų skenavimas}
 \label{sec:example}
 
 \subsubsection{Example}
@@ -179,7 +235,8 @@ Pateikiamas 4.5 poskyrio tekstas. Vienas iš šaltinių [?]. Visas turinys prikl
 
 
  %file literatureSources.bib
-\referenceSources{literatureSources}
+\referenceSources{Bakis}
+%\bibliographystyle{ieeetr}
 
 
 

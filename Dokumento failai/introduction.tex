@@ -1,32 +1,30 @@
-Šiame darbe kuriamas saugus įrankis, kuris neišduotų savo serverio vietos ir vartotojai pasinaudoje juo galėtų gauti išsamią informacija apie jų internetinėje svetainėje egzistuojančias spragas,
-bei pažeidžiamumus ar modifikuotus failus. Darbo tikslas - Sukurti saugų pažeidžiamumų skanavimo įrankį, kuris pasileistų iš tam tikros VPN technologija slepiamos vietos, skanuotų internetinę
-svetainė, bei jos failus, aptiktų pažeidžiamumus ar modifikuotus failus, ir pateiktų klientui informaciją apie skanavimo rezultatus. Siekiant kad darbas būtų paklausus ir veiksmingas, keliami šie
+Šiame darbe kuriamas saugus įrankis, kuris neišduotų savo serverio vietos ir vartotojai pasinaudoję juo galėtų gauti išsamią informaciją apie jų internetinėje svetainėje egzistuojančias spragas
+bei pažeidžiamumus ar modifikuotus failus. Darbo tikslas – sukurti saugų pažeidžiamumų skenavimo įrankį, kuris pasileistų iš tam tikros VPN technologija slepiamos vietos, skenuotų internetinę
+svetainę bei jos failus, aptiktų pažeidžiamumus ar modifikuotus failus, ir pateiktų klientui informaciją apie skenavimo rezultatus. Siekiant, kad darbas būtų paklausus ir veiksmingas, keliami šie
 darbo uždaviniai:
 \begin{enumerate}
-  \item Apžvelgti egzistuojančius panašius įrankius;
-  \item Išanalizuoti dažniausiai pasitaikančius internetinių svetainių pažeidžiamumus;
-  \item Išanalizuoti dažniausiai pasitaikančių pažeidžiamumų egzistuojančius atviro kodo įrankius;
-  \item Išanalizuoti dažniausiai pasitaikančius internetinių svetainių skanavimo metodus.
+	\item Apžvelgti egzistuojančius panašius įrankius;
+	\item Išanalizuoti dažniausiai pasitaikančius internetinių svetainių pažeidžiamumus;
+	\item Išanalizuoti dažniausiai pasitaikančių pažeidžiamumų egzistuojančius atviro kodo įrankius;
+	\item Išanalizuoti dažniausiai pasitaikančius internetinių svetainių skenavimo metodus.
 \end{enumerate}
 Kibernetinis saugumas yra svarbi kiekvienos sistemos dalis. Kadangi kiekvieną sistemą kuria
-žmogus, į kiekvieną sistema įeina žmogiškasis faktorius, del kurio sistemos beveik visada turi
-pažeidžiamumų kuriuos gali išnaudoti puolėjas siekiantis tam tikros naudos. Dėl šios priežasties
+žmogus, ir į kiekvieną sistemą įeina žmogiškasis faktorius, dėl kurio sistemos beveik visada turi
+pažeidžiamumų, kuriuos gali išnaudoti puolėjas siekiantis tam tikros naudos. Dėl šios priežasties
 toks įrankis būtų ypač naudingas bet kokiai sistemai. Aptikus pažeidžiamumą, galima įtarti, kad
-ta pažeidžiamuma gali aptikti ir nuostolio siekiantys asmenys, arba jį jau buvo aptiktas, ir tam tikri
-failai buvo modifikuoti įdedant tam tikrą kodą kuris leistų atakuojančiui asmeniui patekti į sistemą
+tą pažeidžiamumą gali aptikti ir nuostolio siekiantys asmenys, arba jis jau buvo aptiktas, ir tam tikri
+failai buvo modifikuoti įdedant tam tikrą kodą, kuris leistų atakuojančiui asmeniui patekti į sistemą
 nepastebėtam.
-Dėl šių priežasčių, saugus ir automatizuotas sistemų pažeidžiamumo skanavimo įrankis yra
-ypač aktuolus. Tačiau šio įrankio kurimą yra apsunkina šios priežastys:
+Dėl šių priežasčių saugus ir automatizuotas sistemų pažeidžiamumo skenavimo įrankis yra
+ypač aktualus. Tačiau šio įrankio kūrimą apsunkina šios priežastys:
 \begin{itemize}
-  \item Įrankio kurimas reikalauja didelio bagažo žinių;
-  \item Dauguma sistemų kurios turi pažeidžiamas vietas nera atviro kodo, todėl ne visada įmanoma
-aptikti kas būtent sukelią šį pažeidžiamumą, ar išvis kad egzistuoja toks pažeidžiamumas bei
-pažeidžiamumas būna aptinkamas daug vėliau negu atviro kodo pažeidžiamumai;
-  \item Sistemoje gali būti tiek daug skirtingų potencialių pažeidžiamų, kad jų aptikimo automatizavimas tampa galimai neįmanomas.
+	\item Įrankio kūrimas reikalauja didelio bagažo žinių;
+	\item Daugumos sistemų, kurios turi pažeidžiamas vietas, išeities kodas nėra atviras, todėl kai kurios spragos negali būti aptiktos automatizuotu įrankiu. Taip pat negalima atlikti kai kurių sistemos kodo analizių, kas taip pat sumažina tokio įrankio efektyvumą;
+	\item Sistemoje gali būti tiek daug skirtingų potencialių pažeidžiamų, jog jų aptikimo automatizavimas tampa problematiškas.
 \end{itemize}
-Šias problemas siuloma spresti apskaičiuojant tam tikrą įrankio veiksmingumą procentaliai.
-Didžiausias tokio sprendimo privalumas yra tas kad vartotojas supras, kad tokio įrankio rezultatų
+Šias problemas siūloma spręsti apskaičiuojant tam tikrą įrankio veiksmingumą procentaliai.
+Didžiausias tokio sprendimo privalumas yra tas, kad vartotojas supras, jog tokio įrankio rezultatų
 analizavimas ir pritaikymas neužtikrina visų pažeidžiamumų aptikimo ir kibernetinio saugumo
 užtikrinimo.
-Šio įrankio kurimo metu, siekiant sukurti saugų pažeidžiamumų aptiko įrankį, siekiama pagerinti sistemos saugumą, bet neužtikrinti jo. Įrankis bus skirtas tik internetinėms svetainėms ir
-nebus stengiamasi jį pritaikyti ir kitoms sistemoms.
+Šio įrankio kūrimo metu, siekiant sukurti saugų pažeidžiamumų aptikimo įrankį, siekiama pagerinti sistemos saugumą, bet neužtikrinti jo. Įrankis bus skirtas tik internetinėms svetainėms ir
+nebus stengiamasi jo pritaikyti ir kitoms sistemoms.

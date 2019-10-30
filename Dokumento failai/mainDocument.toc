@@ -1,5 +1,5 @@
 \babel@toc {lithuanian}{}
-\contentsline {section}{\nameref {sec:keywords}}{4}{section*.1}% 
+\contentsline {section}{\nameref {sec:FTP}}{4}{section*.1}% 
 \contentsline {section}{Santrauka}{5}{section*.2}% 
 \contentsline {section}{Summary}{6}{section*.3}% 
 \contentsline {section}{\nameref {sec:intro}}{7}{section*.4}% 
@@ -9,34 +9,38 @@
 \contentsline {section}{\numberline {2}Sistem\IeC {\k u} auditavimas}{9}{section.2}% 
 \contentsline {subsection}{\numberline {2.1}Elgsenos analiz\IeC {\.e}}{9}{subsection.2.1}% 
 \contentsline {subsubsection}{\numberline {2.1.1}Example}{9}{subsubsection.2.1.1}% 
-\contentsline {subsection}{\numberline {2.2}Statin\IeC {\.e} sprag\IeC {\k u} analiz\IeC {\.e}}{9}{subsection.2.2}% 
-\contentsline {subsubsection}{\numberline {2.2.1}Example}{9}{subsubsection.2.2.1}% 
-\contentsline {subsection}{\numberline {2.3}Dinamin\IeC {\.e} sprag\IeC {\k u} analiz\IeC {\.e}}{9}{subsection.2.3}% 
-\contentsline {subsubsection}{\numberline {2.3.1}Example}{9}{subsubsection.2.3.1}% 
-\contentsline {subsection}{\numberline {2.4}I\IeC {\v s}orini\IeC {\k u} sprag\IeC {\k u} skanavimas}{9}{subsection.2.4}% 
-\contentsline {subsubsection}{\numberline {2.4.1}Example}{9}{subsubsection.2.4.1}% 
-\contentsline {subsection}{\numberline {2.5}Vidini\IeC {\k u} sprag\IeC {\k u} skanavimas}{9}{subsection.2.5}% 
-\contentsline {subsubsection}{\numberline {2.5.1}Example}{9}{subsubsection.2.5.1}% 
-\contentsline {subsection}{\numberline {2.6}Aplinkos sprag\IeC {\k u} skanavimas}{9}{subsection.2.6}% 
-\contentsline {subsubsection}{\numberline {2.6.1}Example}{9}{subsubsection.2.6.1}% 
-\contentsline {section}{\numberline {3}Gerosios praktikos}{10}{section.3}% 
-\contentsline {subsection}{\numberline {3.1}Atviros kodo programin\IeC {\.e} \IeC {\k i}ranga}{10}{subsection.3.1}% 
-\contentsline {subsubsection}{\numberline {3.1.1}Privalumai}{10}{subsubsection.3.1.1}% 
-\contentsline {subsubsection}{\numberline {3.1.2}Tr\IeC {\=u}kumai}{10}{subsubsection.3.1.2}% 
-\contentsline {subsubsection}{\numberline {3.1.3}Apibendrinimas}{10}{subsubsection.3.1.3}% 
-\contentsline {subsection}{\numberline {3.2}U\IeC {\v z}daro kodo programin\IeC {\.e} \IeC {\k i}ranga}{10}{subsection.3.2}% 
-\contentsline {subsubsection}{\numberline {3.2.1}Privalumai}{10}{subsubsection.3.2.1}% 
-\contentsline {subsubsection}{\numberline {3.2.2}Tr\IeC {\=u}kumai}{10}{subsubsection.3.2.2}% 
-\contentsline {subsubsection}{\numberline {3.2.3}Apibendrinimas}{10}{subsubsection.3.2.3}% 
-\contentsline {section}{\numberline {4}Sistem\IeC {\k u} auditavimo \IeC {\k i}rankis}{11}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}\IeC {\k I}rankio apra\IeC {\v s}as}{11}{subsection.4.1}% 
-\contentsline {subsection}{\numberline {4.2}Aptiktini pa\IeC {\v z}eid\IeC {\v z}iamumai}{11}{subsection.4.2}% 
-\contentsline {subsection}{\numberline {4.3}Tikslumas}{11}{subsection.4.3}% 
-\contentsline {subsection}{\numberline {4.4}\IeC {\k I}gyvendinti luke\IeC {\v s}\IeC {\v c}iai}{11}{subsection.4.4}% 
-\contentsline {subsection}{\numberline {4.5}Tr\IeC {\=u}kumai}{11}{subsection.4.5}% 
-\contentsline {section}{\nameref {sec:conclu}}{12}{section*.5}% 
-\contentsline {section}{\nameref {sec:future}}{13}{section*.6}% 
-\contentsline {section}{Literat\IeC {\=u}ros \IeC {\v s}altiniai}{14}{section*.7}% 
-\contentsline {section}{Priedai}{14}{section*.8}% 
-\contentsline {section}{\numberline {A}Pirmojo priedo pavadinimas}{15}{Priedas.1.A}% 
-\contentsline {section}{\numberline {B}Antrojo priedo pavadinimas}{16}{Priedas.1.B}% 
+\contentsline {subsection}{\numberline {2.2}Statin\IeC {\.e} kodo analiz\IeC {\.e}}{9}{subsection.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.1}Panaudojimas}{9}{subsubsection.2.2.1}% 
+\contentsline {subsubsection}{\numberline {2.2.2}Panaudojimas darbe}{9}{subsubsection.2.2.2}% 
+\contentsline {subsection}{\numberline {2.3}Dinamin\IeC {\.e} kodo analiz\IeC {\.e}}{9}{subsection.2.3}% 
+\contentsline {subsubsection}{\numberline {2.3.1}Panaudojimas}{9}{subsubsection.2.3.1}% 
+\contentsline {subsubsection}{\numberline {2.3.2}Panaudojimas darbe}{10}{subsubsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.4}I\IeC {\v s}orini\IeC {\k u} sprag\IeC {\k u} skenavimas}{10}{subsection.2.4}% 
+\contentsline {subsubsection}{\numberline {2.4.1}Panaudojimas}{10}{subsubsection.2.4.1}% 
+\contentsline {subsubsection}{\numberline {2.4.2}Panaudojimas darbe}{10}{subsubsection.2.4.2}% 
+\contentsline {subsection}{\numberline {2.5}Vidini\IeC {\k u} pa\IeC {\v z}eid\IeC {\v z}iamum\IeC {\k u} skenavimas}{10}{subsection.2.5}% 
+\contentsline {subsubsection}{\numberline {2.5.1}Panaudojimas}{10}{subsubsection.2.5.1}% 
+\contentsline {subsubsection}{\numberline {2.5.2}Panaudojimas darbe}{10}{subsubsection.2.5.2}% 
+\contentsline {subsection}{\numberline {2.6}Aplinkos sprag\IeC {\k u} skenavimas}{11}{subsection.2.6}% 
+\contentsline {subsubsection}{\numberline {2.6.1}Example}{11}{subsubsection.2.6.1}% 
+\contentsline {section}{\numberline {3}Gerosios praktikos}{12}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}Atviros kodo programin\IeC {\.e} \IeC {\k i}ranga}{12}{subsection.3.1}% 
+\contentsline {subsubsection}{\numberline {3.1.1}Privalumai}{12}{subsubsection.3.1.1}% 
+\contentsline {subsubsection}{\numberline {3.1.2}Tr\IeC {\=u}kumai}{12}{subsubsection.3.1.2}% 
+\contentsline {subsubsection}{\numberline {3.1.3}Apibendrinimas}{12}{subsubsection.3.1.3}% 
+\contentsline {subsection}{\numberline {3.2}U\IeC {\v z}daro kodo programin\IeC {\.e} \IeC {\k i}ranga}{12}{subsection.3.2}% 
+\contentsline {subsubsection}{\numberline {3.2.1}Privalumai}{12}{subsubsection.3.2.1}% 
+\contentsline {subsubsection}{\numberline {3.2.2}Tr\IeC {\=u}kumai}{12}{subsubsection.3.2.2}% 
+\contentsline {subsubsection}{\numberline {3.2.3}Apibendrinimas}{12}{subsubsection.3.2.3}% 
+\contentsline {section}{\numberline {4}Sistem\IeC {\k u} auditavimo \IeC {\k i}rankis}{13}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}\IeC {\k I}rankio apra\IeC {\v s}as}{13}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Aptiktini pa\IeC {\v z}eid\IeC {\v z}iamumai}{13}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.3}Tikslumas}{13}{subsection.4.3}% 
+\contentsline {subsection}{\numberline {4.4}\IeC {\k I}gyvendinti luke\IeC {\v s}\IeC {\v c}iai}{13}{subsection.4.4}% 
+\contentsline {subsection}{\numberline {4.5}Tr\IeC {\=u}kumai}{13}{subsection.4.5}% 
+\contentsline {section}{\nameref {sec:conclu}}{14}{section*.5}% 
+\contentsline {section}{\nameref {sec:future}}{15}{section*.6}% 
+\contentsline {section}{Literat\IeC {\=u}ros \IeC {\v s}altiniai}{16}{section*.7}% 
+\contentsline {section}{Priedai}{17}{section*.9}% 
+\contentsline {section}{\numberline {A}Pirmojo priedo pavadinimas}{18}{Priedas.1.A}% 
+\contentsline {section}{\numberline {B}Antrojo priedo pavadinimas}{19}{Priedas.1.B}% 
