@@ -1,0 +1,35 @@
+\begin{thebibliography}{1}
+
+\bibitem{Cowan:2003:SSO:858866.859050}
+Crispin Cowan.
+\newblock {Software Security for Open-Source Systems}.
+\newblock {\em IEEE Security and Privacy}, 1(1):38--45, jan 2003.
+
+\bibitem{HoepmanJaap}
+Jaap-Henk Hoepman and Bart Jacobs.
+\newblock {Software Security Through Open Source}.
+\newblock 2004.
+
+\bibitem{Meneely:2009:SOS:1653662.1653717}
+Andrew Meneely and Laurie Williams.
+\newblock {Secure Open Source Collaboration: An Empirical Study of Linus' Law}.
+\newblock In {\em Proceedings of the 16th ACM Conference on Computer and
+  Communications Security}, CCS '09, pages 453--462, New York, NY, USA, 2009.
+  ACM.
+
+\bibitem{Orebaugh:2008:NEY:1571843}
+Angela Orebaugh and Becky Pinkard.
+\newblock {\em Nmap in the Enterprise: Your Guide to Network Scanning}.
+\newblock Syngress Publishing, 2008.
+
+\bibitem{Szor:2005:ACV:1050957}
+Peter Szor.
+\newblock {\em {The Art of Computer Virus Research and Defense}}.
+\newblock Addison-Wesley Professional, 2005.
+
+\bibitem{951496}
+B~Witten, C~Landwehr, and M~Caloyannides.
+\newblock {Does open source improve system security?}
+\newblock {\em IEEE Software}, 18(5):57--61, 2001.
+
+\end{thebibliography}

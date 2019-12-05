@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.21)  30 OCT 2019 19:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.21)  25 NOV 2019 19:38
 entering extended mode
 **./mainDocument.tex
 (mainDocument.tex
@@ -823,6 +823,9 @@ sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )) (mainDocument.aux
 
+LaTeX Warning: Label `sec:example' multiply defined.
+
+
 LaTeX Warning: Label `sec:motivation' multiply defined.
 
 
@@ -847,9 +850,6 @@ LaTeX Warning: Label `sec:example' multiply defined.
 LaTeX Warning: Label `sec:data' multiply defined.
 
 
-LaTeX Warning: Label `sec:data' multiply defined.
-
-
 LaTeX Warning: Label `sec:example' multiply defined.
 
 
@@ -859,13 +859,10 @@ LaTeX Warning: Label `sec:data' multiply defined.
 LaTeX Warning: Label `sec:example' multiply defined.
 
 
-LaTeX Warning: Label `sec:data' multiply defined.
-
-
 LaTeX Warning: Label `sec:example' multiply defined.
 
 
-LaTeX Warning: Label `sec:data' multiply defined.
+LaTeX Warning: Label `sec:example' multiply defined.
 
 
 LaTeX Warning: Label `sec:motivation' multiply defined.
@@ -883,12 +880,6 @@ LaTeX Warning: Label `sec:data' multiply defined.
 LaTeX Warning: Label `sec:data' multiply defined.
 
 
-LaTeX Warning: Label `sec:example' multiply defined.
-
-
-LaTeX Warning: Label `sec:data' multiply defined.
-
-
 LaTeX Warning: Label `sec:data' multiply defined.
 
 
@@ -896,9 +887,6 @@ LaTeX Warning: Label `sec:data' multiply defined.
 
 
 LaTeX Warning: Label `sec:motivation' multiply defined.
-
-
-LaTeX Warning: Label `sec:example' multiply defined.
 
 
 LaTeX Warning: Label `sec:example' multiply defined.
@@ -1051,7 +1039,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 22.
 ("C:\Users\Johny\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<jb_VU_zenklas.pdf, id=183, 501.875pt x 550.055pt>
+<jb_VU_zenklas.pdf, id=215, 501.875pt x 550.055pt>
 File: jb_VU_zenklas.pdf Graphic file (type pdf)
 <use jb_VU_zenklas.pdf>
 Package pdftex.def Info: jb_VU_zenklas.pdf  used on input line 26.
@@ -1081,50 +1069,50 @@ File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ))
 [7]
 LaTeX Font Info:    Font shape `L7x/utm/bx/n' in size <14.4> not available
-(Font)              Font shape `L7x/utm/b/n' tried instead on input line 59.
- [8] [9] [10] [11] [12] [13] (conclusions.tex) [14] [15] (mainDocument.bbl)
-[16
+(Font)              Font shape `L7x/utm/b/n' tried instead on input line 64.
+ [8] [9] [10] [11] [12] [13] [14] [15]
+Overfull \hbox (0.65218pt too wide) in paragraph at lines 276--277
+[]\L7x/utm/m/n/12 Iðorinis in-ter-ne-ti-nës sve-tai-nës ska-na-vi-mas pa-þei-dþ
+ia-mu-mu ska-na-vi-mas nau-do-jant Nmap áran-
+ []
+
+[16] (conclusions.tex) [17] [18] (mainDocument.bbl) [19
 
 ]
 LaTeX Font Info:    Font shape `L7x/utm/bx/n' in size <24.88> not available
-(Font)              Font shape `L7x/utm/b/n' tried instead on input line 245.
- [17] [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 259.
- [19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 259.
- (mainDocument.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 259.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 259.
+(Font)              Font shape `L7x/utm/b/n' tried instead on input line 318.
+ [20] [21]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 332.
+ [22]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 332.
 
+(mainDocument.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 332.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 332.
+Package rerunfilecheck Info: File `mainDocument.out' has not changed.
+(rerunfilecheck)             Checksum: 28592D96A65411B71412250A2FBC46E4;9229.
 
-Package rerunfilecheck Warning: File `mainDocument.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `mainDocument.out':
-(rerunfilecheck)             Before: 5E9E7C0175DBABB73FAAEB007006947B;6835
-(rerunfilecheck)             After:  629E578847D7FC5B24E3C4236BA1B689;6909.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 259.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 332.
  ) 
 Here is how much of TeX's memory you used:
- 28630 strings out of 492895
- 500134 string characters out of 3123735
- 559755 words of memory out of 3000000
- 32201 multiletter control sequences out of 15000+200000
+ 28659 strings out of 492895
+ 500667 string characters out of 3123735
+ 560961 words of memory out of 3000000
+ 32214 multiletter control sequences out of 15000+200000
  555506 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,63p,1048b,846s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,11n,63p,1430b,852s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Johny/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lithuanian/
 latin7x.enc}<C:/Users/Johny/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/t
 imes/utmb8a.pfb><C:/Users/Johny/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/u
 rw/times/utmr8a.pfb><C:/Users/Johny/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on mainDocument.pdf (19 pages, 171362 bytes).
+Output written on mainDocument.pdf (22 pages, 202638 bytes).
 PDF statistics:
- 367 PDF objects out of 1000 (max. 8388607)
- 72 named destinations out of 1000 (max. 500000)
- 366 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 443 PDF objects out of 1000 (max. 8388607)
+ 88 named destinations out of 1000 (max. 500000)
+ 430 words of extra memory for PDF output out of 10000 (max. 10000000)
 
