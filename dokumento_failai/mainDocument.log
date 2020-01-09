@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.21)  6 JAN 2020 02:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.21)  9 JAN 2020 05:17
 entering extended mode
 **./mainDocument.tex
 (mainDocument.tex
@@ -832,18 +832,6 @@ LaTeX Warning: Label `sec:motivation' multiply defined.
 LaTeX Warning: Label `sec:example' multiply defined.
 
 
-LaTeX Warning: Label `sec:data' multiply defined.
-
-
-LaTeX Warning: Label `sec:example' multiply defined.
-
-
-LaTeX Warning: Label `sec:data' multiply defined.
-
-
-LaTeX Warning: Label `sec:data' multiply defined.
-
-
 LaTeX Warning: Label `sec:example' multiply defined.
 
 
@@ -853,7 +841,7 @@ LaTeX Warning: Label `sec:data' multiply defined.
 LaTeX Warning: Label `sec:example' multiply defined.
 
 
-LaTeX Warning: Label `sec:data' multiply defined.
+LaTeX Warning: Label `sec:example' multiply defined.
 
 
 LaTeX Warning: Label `sec:example' multiply defined.
@@ -880,12 +868,6 @@ LaTeX Warning: Label `sec:data' multiply defined.
 LaTeX Warning: Label `sec:data' multiply defined.
 
 
-LaTeX Warning: Label `sec:data' multiply defined.
-
-
-LaTeX Warning: Label `sec:data' multiply defined.
-
-
 LaTeX Warning: Label `sec:motivation' multiply defined.
 
 
@@ -898,7 +880,13 @@ LaTeX Warning: Label `sec:example' multiply defined.
 LaTeX Warning: Label `sec:example' multiply defined.
 
 
-LaTeX Warning: Label `sec:example' multiply defined.
+LaTeX Warning: Label `sec:data' multiply defined.
+
+
+LaTeX Warning: Label `sec:data' multiply defined.
+
+
+LaTeX Warning: Label `sec:data' multiply defined.
 
 )
 \openout1 = `mainDocument.aux'.
@@ -1039,7 +1027,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 22.
 ("C:\Users\Johny\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<jb_VU_zenklas.pdf, id=215, 501.875pt x 550.055pt>
+<jb_VU_zenklas.pdf, id=175, 501.875pt x 550.055pt>
 File: jb_VU_zenklas.pdf Graphic file (type pdf)
 <use jb_VU_zenklas.pdf>
 Package pdftex.def Info: jb_VU_zenklas.pdf  used on input line 26.
@@ -1063,62 +1051,93 @@ klas.pdf>] (mainDocument.toc [2])
 \tf@toc=\write4
 \openout4 = `mainDocument.toc'.
 
- [3] [4] (abstract.tex) [5] (abstractEN.tex) [6] (introduction.tex
+ [3] [4] (abstract.tex) [5] (abstractEN.tex
 ("C:\Users\Johny\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ucs\uni-32.def"
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ))
-[7]
+[6] (introduction.tex [7]) [8]
 LaTeX Font Info:    Font shape `L7x/utm/bx/n' in size <14.4> not available
-(Font)              Font shape `L7x/utm/b/n' tried instead on input line 64.
- [8] [9] [10] [11] [12] [13] [14] [15]
-Overfull \hbox (0.65218pt too wide) in paragraph at lines 276--277
-[]\L7x/utm/m/n/12 Iðorinis in-ter-ne-ti-nës sve-tai-nës ska-na-vi-mas pa-þei-dþ
-ia-mu-mu ska-na-vi-mas nau-do-jant Nmap áran-
- []
+(Font)              Font shape `L7x/utm/b/n' tried instead on input line 68.
+ [9] [10] [11] [12] [13] [14] [15]
+<figs/arch1lt.png, id=369, 522.95375pt x 352.31625pt>
+File: figs/arch1lt.png Graphic file (type png)
+<use figs/arch1lt.png>
+Package pdftex.def Info: figs/arch1lt.png  used on input line 260.
+(pdftex.def)             Requested size: 422.52057pt x 284.65959pt.
+ [16 <./figs/arch1lt.png>]
+<figs/Activitylt.png, id=378, 550.055pt x 488.82625pt>
+File: figs/Activitylt.png Graphic file (type png)
+<use figs/Activitylt.png>
+Package pdftex.def Info: figs/Activitylt.png  used on input line 274.
+(pdftex.def)             Requested size: 422.52057pt x 375.5023pt.
+ [17 <./figs/Activitylt.png>]
+<figs/Full.png, id=387, 532.99126pt x 402.50375pt>
+File: figs/Full.png Graphic file (type png)
+<use figs/Full.png>
+Package pdftex.def Info: figs/Full.png  used on input line 289.
+(pdftex.def)             Requested size: 422.52057pt x 319.08612pt.
+ [18]
+<figs/1Containerlt.png, id=393, 393.47pt x 191.71625pt>
+File: figs/1Containerlt.png Graphic file (type png)
+<use figs/1Containerlt.png>
+Package pdftex.def Info: figs/1Containerlt.png  used on input line 296.
+(pdftex.def)             Requested size: 422.52057pt x 205.8686pt.
+<figs/2Containerlt.png, id=394, 503.8825pt x 191.71625pt>
+File: figs/2Containerlt.png Graphic file (type png)
+<use figs/2Containerlt.png>
+Package pdftex.def Info: figs/2Containerlt.png  used on input line 303.
+(pdftex.def)             Requested size: 422.52057pt x 160.7597pt.
+ [19 <./figs/Full.png> <./figs/1Containerlt.png>]
+<figs/3Containerlt.png, id=404, 393.47pt x 191.71625pt>
+File: figs/3Containerlt.png Graphic file (type png)
+<use figs/3Containerlt.png>
+Package pdftex.def Info: figs/3Containerlt.png  used on input line 310.
+(pdftex.def)             Requested size: 422.52057pt x 205.8686pt.
+ [20 <./figs/2Containerlt.png> <./figs/3Containerlt.png>]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 332.
 
+[21] [22] [23] (conclusions.tex) [24] [25] (mainDocument.bbl [26
 
-Overfull \hbox (0.65218pt too wide) in paragraph at lines 277--278
-[]\L7x/utm/m/n/12 Iðorinis in-ter-ne-ti-nës sve-tai-nës ska-na-vi-mas pa-þei-dþ
-ia-mu-mu ska-na-vi-mas nau-do-jant Nmap áran-
- []
-
-[16] (conclusions.tex) [17] [18] (mainDocument.bbl) [19
-
-]
-LaTeX Font Info:    Font shape `L7x/utm/bx/n' in size <24.88> not available
-(Font)              Font shape `L7x/utm/b/n' tried instead on input line 319.
- [20] [21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 333.
- [22]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 333.
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 425.
+ [27]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 425.
 
 (mainDocument.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 333.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 333.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 425.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 425.
 Package rerunfilecheck Info: File `mainDocument.out' has not changed.
-(rerunfilecheck)             Checksum: 28592D96A65411B71412250A2FBC46E4;9229.
+(rerunfilecheck)             Checksum: 29F1EED5B5373D5586BE8695FA9AF126;7660.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 333.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 425.
  ) 
 Here is how much of TeX's memory you used:
- 28659 strings out of 492895
- 500667 string characters out of 3123735
- 560961 words of memory out of 3000000
- 32214 multiletter control sequences out of 15000+200000
- 555506 words of font info for 59 fonts, out of 3000000 for 9000
+ 28788 strings out of 492895
+ 502558 string characters out of 3123735
+ 561063 words of memory out of 3000000
+ 32299 multiletter control sequences out of 15000+200000
+ 552428 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,63p,1430b,852s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,11n,77p,1450b,862s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Johny/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lithuanian/
-latin7x.enc}<C:/Users/Johny/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/t
-imes/utmb8a.pfb><C:/Users/Johny/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/u
-rw/times/utmr8a.pfb><C:/Users/Johny/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/urw/times/utmri8a.pfb>
-Output written on mainDocument.pdf (22 pages, 202776 bytes).
+latin7x.enc}<C:/Users/Johny/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmmi12.pfb><C:/Users/Johny/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Johny/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Johny/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Johny/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb
+
+pdfTeX warning: pdflatex.exe (file C:/Users/Johny/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/urw/times/utmr8a.pfb): glyph `ff' undefined
+><C:/Users/Johny/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8
+a.pfb>
+Output written on mainDocument.pdf (27 pages, 331418 bytes).
 PDF statistics:
- 443 PDF objects out of 1000 (max. 8388607)
- 88 named destinations out of 1000 (max. 500000)
- 430 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 512 PDF objects out of 1000 (max. 8388607)
+ 124 named destinations out of 1000 (max. 500000)
+ 380 words of extra memory for PDF output out of 10000 (max. 10000000)
 

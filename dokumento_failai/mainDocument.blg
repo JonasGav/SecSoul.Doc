@@ -1,5 +1,10 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: mainDocument.aux
 The style file: plain.bst
 Database file #1: References.bib
-Warning--empty journal in HoepmanJaap
-(There was 1 warning)
+Warning--empty booktitle in inproceedings
+Warning--empty journal in brown2002opening
+Warning--empty journal in grewal2017hybrid
+Warning--empty journal in postel1985file
+Warning--empty journal in sakri2004intrusion
+Warning--empty journal in ylonen2006secure
+(There were 6 warnings)

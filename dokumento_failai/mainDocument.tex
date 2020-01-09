@@ -31,22 +31,26 @@
 %keywords and notations if needed
 \sectionWithoutNumber{Sutartinis terminų žodynas}{FTP}{
 	\begin{itemize}
-		\item FTP - \textit{File Transfer protocol}, protokolas leidžiantis perkelti duomenis iš vienos sitemos į kitą.
-		\item 	Buf{}fer overflow - tai viena iš potencialių rizikų, kai dėl per didelio kiekio duomenų, informacija yra perrašoma gretimuose atminties blokuose.
-		\item 	SSH - \textit{Secure Shell}, tai tinklo protokolas kuris leidžia vartotojui saugiai pasiekti sistemą per nesaugu tinklą.
-		\item Framework - Tai karkasas, į kurį įeina daug programinės įrangos ar kitų sistemų.
-		\item 	NASL - \textit{Nessus Attack Scripting Language}, tai paprastą kalbą, apibūdinanti atskiras grėsmes ir galimas atakas.
-		\item IPS - \textit{Intrusion prevention system}
-		\item IDS - \textit{Intrusion detection system}
-		\item HTTP - \textit{HyperText Transfer Protocol} tai informacijos priemimo perdavimo protokolas.
+		\item FTP - \textit{File Transfer protocol}, protokolas leidžiantis perkelti duomenis iš vienos sitemos į kitą\cite{postel1985file}.
+		\item MITM - \textit{Man in the middle}, Tai kibernetinės atakos tipas, kai puolėjas perima bendravima tarp serverio ir kliento\cite{callegati2009man}.
+		\item 	Buf{}fer overflow - tai viena iš potencialių rizikų, kai dėl per didelio kiekio duomenų, informacija yra perrašoma gretimuose atminties blokuose\cite{cowan1998stackguard}.
+		\item 	SSH - \textit{Secure Shell}, tai tinklo protokolas kuris leidžia vartotojui saugiai pasiekti sistemą per nesaugu tinklą \cite{ylonen2006secure}.
+		\item Framework - Tai karkasas, į kurį įeina kelios ar daugiau programinės įrangos ar kitų sistemų.
+		\item 	NASL - \textit{Nessus Attack Scripting Language}, tai paprastą kalbą, skirta aprašyti atskiras grėsmes ir galimas atakas.
+		\item IDS - \textit{Intrusion detection system}, tai sistema, skirta aktyviam saugumui, ji gali aptikti išpuoli realiu laiku\cite{sakri2004intrusion}.
+		\item IPS - \textit{Intrusion prevention system}, tai \textit{IDS} papildymas, kuris gali aptikti įsilaužimą, ir ji sustabdyti\cite{sakri2004intrusion}.
+		\item HTTP - \textit{HyperText Transfer Protocol} tai informacijos priemimo perdavimo protokolas\cite{fielding1999hypertext}.
 		\item Daemon - Tai programa kuri veikia fone ir nėra valdoma vartotojo, bet laukia specifinio įvykio ar salygos suveikti.
-		\item  Backdoor - Tai kodo dalis kuri leidžia atakuotojuj į sistemą patekti nepastebėtam.
+		\item Backdoor - Tai kodo dalis kuri leidžia atakuotojuj į sistemą patekti nepastebėtam.
+		\item Malware - Kenkimo programinė įranga, tai bendras pavadinimas tokiai programinei įrangai, kuri yra kenkėjiška ir patenka į sistema be vartotojo leidimo\cite{grewal2017hybrid}.
+		\item SQL injection - SQL injekcija. Tai vienas iš kibernetinės atakos tipų kai vartotojo įvestis internetinėje svėtainėje yra sumanipuliuojama taip, kad ji padarytu daugiau negu buvo planuota, paveikiant duomenų bazę ir joje įgyvendinant užklausą\cite{mcwhirter2018sql}.
+		\item Phishing - Fišingas, būdas skirtas pavogti privačia informacija apsimetant tam tikru tiekėju.
 	\end{itemize}
 }
 
  %both abstracts
 \bothabstracts{\input{abstract}}%tex-file of abstract in original language
-{Darbo pavadinimas kita kalba} %if work is in LT this title should be in English
+{Secure Vulnerability Scanner for System Auditing} %if work is in LT this title should be in English
 {\input{abstractEN}}%tex-file of abstract in other language
 
 
@@ -64,9 +68,7 @@
 \subsection{Nessus skaitytuvas}
 \label{sec:example}
 
-\subsubsection{Įrankio aprašymas}
-
-„Nessus“ įrankis yra tinklo pažeidžiamumų skaitytuvas, kuris naudoja bendrąją pažeidžiamumų architektūrą, kad lengvai susietų suderinamus kibernetinio saugumo įrankius. „Nessus“ naudoja \textit{NASL}.
+„Nessus“ įrankis yra tinklo pažeidžiamumų skaitytuvas, kuris naudoja bendrąją pažeidžiamumų architektūrą, kad lengvai susietų suderinamus kibernetinio saugumo įrankius. „Nessus“ naudoja \textit{NASL}\cite{rogers2011nessus}. 
 
 „Nessus“ turi modulinę architektūrą, susidedančią iš serverio \textit{daemon} atliekančio nuskaitymą, ir nuotolinų kliento kuris yra valdomas administratoriaus. Administratoriai gali įtraukti \textit{NASL} visų įtariamų pažeidžiamumų aprašus, kad sukurtų tinkintus nuskaitymus. Reikšmingos „Nessus“ galimybės:
 
@@ -79,18 +81,16 @@
 	\item Suplanuotas saugumo auditas.
 \end{itemize}
 
-„Nessus“ serverį šiuo metu galima naudoti „Unix“, „Linux“ ir „FreeBSD“. Klientas yra prieinamas „Unix“ arba „Windows“ operacinėms sistemoms.
+„Nessus“ serverį šiuo metu galima naudoti su dauguma „Linux“ operacinių sistemų. Klientas yra prieinamas „Linux“ arba „Windows“ operacinėms sistemoms. 
 
-\subsubsection{Panaudojimas darbe}
 
-Darbe bus naudojama "Nessus" architektūra, vartotojo sąsaja nebus tiesiogiai bendraujanti su pačių serveriu kuris vykdys skanavimus, taip jie bus nepriklausomi vienas nuo kito. Taip pat serveris susidarys iš skirtingų modulių, kurie veiks padedami docker technologijos, bus kuriami atskiri konteineriai ir vykdomos atskiros izoliutos operacijos tam, kad sumažinti riziką infekuoti patį serverį.
 
 \subsection{OpenVAS skaitytuvas}
 \label{sec:example}
 
 \subsubsection{Įrankio aprašymas}
 
-„OpenVAS“ yra visa apimantis pažeidžiamumų skaitytuvas. Jo galimybės apima įvairių aukšto ir žemo lygio interneto ir pramoninių protokolų skanavimą, našumo derinimą didelės apimties nuskaitymams ir galingą vidinę programavimo kalbą, kad būtų galima įgyvendinti bet kokio tipo pažeidžiamumo testą.
+„OpenVAS“ yra visa apimantis pažeidžiamumų skaitytuvas. Jo galimybės apima įvairių aukšto ir žemo lygio interneto ir pramoninių protokolų skanavimą, našumo derinimą didelės apimties nuskaitymams ir galingą vidinę programavimo kalbą, kad būtų galima įgyvendinti bet kokio tipo pažeidžiamumo testą\cite{inproceedings}.
 
 \subsubsection{Irankio ištakos}
 
@@ -99,14 +99,11 @@ Darbe bus naudojama "Nessus" architektūra, vartotojo sąsaja nebus tiesiogiai b
 
 Dėl šios priežasties abu įrankiai yra panašus. Didžiausias tarp jų skirtumas yra tas, kad „Nessus“ įrankis yra komercializuotas, priešingai negu „OpenVAS“.
 
-\subsubsection{Panaudojimas darbe}
 
 \subsection{Nmap}
 \label{sec:nmap}
 
-\subsubsection{Įrankio aprašymas}
-
-„Nmap“ („Network Mapper“) yra nemokamas ir atvirojo kodo įrankis skirtas tinklo skanavimui. Daugelis sistemų ir tinklo administratorių mano, kad šis įrankis naudingas atliekant tokias užduotis kaip tinklo inventorizavimas ir  pagrindinio kompiuterio ar paslaugos veikimo stebėjimas. „Nmap“ naudoja neapdorotus IP paketus, kas taip pat padeda įrankiui būti daug efektyviasniam. Įrankis buvo sukurtas greitai nuskaityti didelius tinklus, tačiau puikiai veikia su atskirais kompiuteriais ar serveriais. „Nmap“ veikia visose pagrindinėse kompiuterių operacinėse sistemose  „Linux“, „Windows“ ir „Mac OS X“. \cite{Orebaugh:2008:NEY:1571843}
+„Nmap“ („Network Mapper“) yra nemokamas ir atvirojo kodo įrankis skirtas tinklo skanavimui. Daugelis sistemų ir tinklo administratorių mano, kad šis įrankis naudingas atliekant tokias užduotis kaip tinklo inventorizavimas ir  pagrindinio kompiuterio ar paslaugos veikimo stebėjimas. „Nmap“ naudoja neapdorotus IP paketus, kas taip pat padeda įrankiui būti daug efektyviasniam. Įrankis buvo sukurtas greitai nuskaityti didelius tinklus, tačiau puikiai veikia su atskirais kompiuteriais ar serveriais. „Nmap“ veikia visose pagrindinėse kompiuterių operacinėse sistemose  „Linux“, „Windows“ ir „Mac OS X“\cite{Orebaugh:2008:NEY:1571843}. 
 
 Irankio skanavimo galimybes:
 \begin{itemize}
@@ -116,11 +113,6 @@ Irankio skanavimo galimybes:
 	\item Saugumo auditavimas: Taip pat "Nmap" aptinka kokias ugniasienes ar paketų filtrus pasirinktasis irenginys naudoja.
 \end{itemize}
 
-
-\subsubsection{Panaudojimas darbe}
-
-Įrankis yra puikiai pritaikytas naudoti bet kokioje sistemoje, taip pat jį ypač patogu pritaikyti bet kokia scenarijuje. Šis įrankis yra plačiai naudojamas kibernetinio saugumo bendruomeneje ir taip pat yra ypač efektyvus atliekant tinklo skanavimus ar analizę. Atsisžvelgus į šiuos faktus, šis įrankis tampa butinybė bet kokioje spragų skanavimo sistemoje dėl savo didelio potencialo ir bendruomenės pasitikėjimo.
-
 \newpage
 \section{Sistemų auditavimas}
 \label{sec:motivation}
@@ -128,9 +120,8 @@ Irankio skanavimo galimybes:
 \subsection{Statinė kodo analizė}
 \label{sec:example}
 
-\subsubsection{Panaudojimas}
 \label{sec:data}
-Statinė analizė suteikia galimybę gauti informacijos apie galimą programos elgesį programos vykdymo metu, nevykdant programos. Statinė analizė tiria išeities kodą ir ieško įtartinų kodo segmentų kurie galėtu turėti spragą. Atlikus teisingai statinę analizę, galima aptikti akivaizdžias klaidas kurių programuotojas galėjo nepastebėti, tai sutaupo laiko bei sumažina spragų kiekį, taip pat galimai aptinkami nenumatyti scenarijai. Kai kurios programavimo aplinkos (Visual Studio, IntelliJ...) atlieka pastovią statine analizę tam, kad programuotojai pamatytų potencialias klaidas prieš sistemos startą. \cite{Cowan:2003:SSO:858866.859050}
+Statinė analizė suteikia galimybę gauti informacijos apie galimą programos elgesį programos vykdymo metu, nevykdant programos. Statinė analizė tiria išeities kodą ir ieško įtartinų kodo segmentų kurie galėtu turėti spragą. Atlikus teisingai statinę analizę, galima aptikti akivaizdžias klaidas kurių programuotojas galėjo nepastebėti, tai sutaupo laiko bei sumažina spragų kiekį, taip pat galimai aptinkami nenumatyti scenarijai\cite{Cowan:2003:SSO:858866.859050}. Kai kurios programavimo aplinkos (Visual Studio, IntelliJ...) atlieka pastovią statine analizę tam, kad programuotojai pamatytų potencialias klaidas prieš sistemos startą. 
 
 Statinė analizė padeda aptikti:
 \begin{itemize}
@@ -140,16 +131,13 @@ Statinė analizė padeda aptikti:
 \end{itemize}
 
 
-\subsubsection{Panaudojimas darbe}
-\label{sec:data}
-Vartotojui davus \textit{FTP} serverio adresą iš jo bus bandoma atsisiūsti išeities kodą. Atsisiuntus sistemos išeities kodą bus atliekama statinė analizė ir taip bus bandoma aptikti spragas ar scenarijus, kurie kelią potencialią grėsmę pačiai sistemai. Tokios grėsmės būtų - įsilaužimas, arba sistemos veikimo paveikimas, sugadinimas. 
+
 \subsection{Dinaminė kodo analizė}
 \label{sec:example}
 
 
-\subsubsection{Panaudojimas}
 \label{sec:data}
-Dinaminė analizė vykdoma kai programa jau yra vykdomo stadijoje. Dynaminės analizės metu bandoma igyvendinti visus įmanomus scenarijus ir išbandyti visas imanomas įvesčių variacijas suvedant jas į programos ivestį.
+Dinaminė analizė vykdoma kai programa jau yra vykdomo stadijoje. Dynaminės analizės metu bandoma igyvendinti visus įmanomus scenarijus ir išbandyti visas imanomas įvesčių variacijas suvedant jas į programos ivestį. Dinaminė analizė galima taikyti modifikuotoms programoms, virusams ir kitiems paleidžiamiems projektams \cite{bayer2006dynamic}.
 
 Veikimo metu programa gali neatlaisvinti atminties atgal į operacinę sistemą, to pasekoje serveris kuriame programa veikia, pritruks atminties ir pradės veikti lečiau kol galiausiai sustos. Nuo to padėtų apsaugoti dinaminė analizė, atlikus ją teisingai, galima aptikti didžiają dalį spragų kurios potencialiai labiausiai įtakos sistemą. Jas ištaisius, sistema veikimo stabilumas padidėja, nenumatytų scenarijų skaičius taip pat pamažėja.
 
@@ -160,15 +148,10 @@ Dinaminė analizė padeda aptikti:
 	\item Opiausias spragas;
 \end{itemize}
 
-\subsubsection{Panaudojimas darbe}
-\label{sec:data}
-Dinaminė analizė bus taikoma spragų skenavimo sistemoje su kliento sutikimu. Analizės metu, bus bandoma į visas sistemos įvestis pateikti nenumatytu reikšmių, taip išbandant kuo daugiau nenumatytų scenarijų.
-
 \subsection{Išorinių spragų skenavimas}
 \label{sec:example}
 
-\subsubsection{Panaudojimas}
-Išorinis pažeidžiamumų skenavimas atliekamas iš sistemos tinklo išorės, o pagrindinis jo tikslas yra aptikti perimetro gynybos spragas, pavyzdžiui: atvirus tinklo užkardos prievadus ar specializuotą žiniatinklio programų užkardą. Išorinis pažeidžiamumų skenavimas gali padėti organizacijoms išspręsti saugumo problemas, kurios įsilaužėliams galėtų suteikti prieigą prie organizacijos tinklo.
+Išorinis pažeidžiamumų skenavimas atliekamas iš sistemos tinklo išorės, o pagrindinis jo tikslas yra aptikti perimetro gynybos spragas, pavyzdžiui: atvirus tinklo užkardos prievadus ar specializuotą žiniatinklio programų užkardą\cite{gula1999passive}. Išorinis pažeidžiamumų skenavimas gali padėti organizacijoms išspręsti saugumo problemas, kurios įsilaužėliams galėtų suteikti prieigą prie organizacijos tinklo.
 \newline
 Išorinis pažeidžiamumų skenavimas aptiks:
 \begin{itemize}
@@ -177,15 +160,12 @@ Išorinis pažeidžiamumų skenavimas aptiks:
 	\item Atidaryti prievadus ir protokolus - įėjimo taškus į sistemos tinklą;
 \end{itemize}
 
-\subsubsection{Panaudojimas darbe}
-\label{sec:data}
-Testavimo įrankyje bus implementuota prievadų skanavimo funkcija naudojant "Nmap" atviro kodo įrankį , taip pat bus bandoma išgauti informacija apie pačią sistemą, kokia operacinę sistemą pati sistema naudoja, kokia tos operacinės sistemos versija, atidaryti prievadai, taip pat bus tikrinama ar prie tam tikrų prievadų galima bandyti jungtis. Pagal šia informaciją, galima suprasti, koki atakos vektorių galimai pasirinktų pats puolėjas.
+
 
 \subsection{Vidinių pažeidžiamumų skenavimas}
 \label{sec:example}
 
-\subsubsection{Panaudojimas}
-Vidinis pažeidžiamumo patikrinimas atliekamas iš organizacijos perimetro gynybos. Jos tikslas yra aptikti pažeidžiamumus, kuriuos galėtų išnaudoti įsilaužėliai arba nepatenkinti darbuotojai, sėkmingai įsiskverbiantys į perimetro gynybą, arba turintys teisėtą prieigą prie organizacijos tinklo.
+Vidinis pažeidžiamumo patikrinimas atliekamas iš organizacijos perimetro gynybos \cite{asbjornslett1999assess}. Jos tikslas yra aptikti pažeidžiamumus, kuriuos galėtų išnaudoti įsilaužėliai arba nepatenkinti darbuotojai, sėkmingai įsiskverbiantys į perimetro gynybą, arba turintys teisėtą prieigą prie organizacijos tinklo.
 
 Vidinių pažeidžiamumų skenavimas aptiks:
 \begin{itemize}
@@ -193,72 +173,63 @@ Vidinių pažeidžiamumų skenavimas aptiks:
 	\item Pasenusi programinė įranga, kuriai reikia atnaujinimų;
 \end{itemize}
 
-\subsubsection{Panaudojimas darbe}
-\label{sec:data}
-Įrankio vartotojas savo noru gali pateikti prisijungimus prie sistemos naudojant \textit{SSH} protokolą. Pasinaudojus šia informaciją įrankis prisijungs prie sistemos, ir naudodamas vidinės analizės komponentą, bandys surinkti kuo daugiau informacijos. Surinkus visą galimą informaciją, bus ieškomos potencialios spragos.
+
 
 \subsection{Oligomorfinių virusų skenavimas}
 \label{sec:example}
 
-Virusų kurėjai greitai suprato, kad užšifruotą virusą antivirusinei programinei įrangai aptikti yra paprasta, kol paties iššifruotojo kodas yra pakankamai ilgas ir pakankamai unikalus. Norėdami apgauti antivirusinius produktus, jie nusprendė įgyvendinti techninį ieškojimą, jie nusprendė įdiegti mutavusių iššifruoklių kūrimo būdus. \cite{Szor:2005:ACV:1050957}
+Virusų kurėjai greitai suprato, kad užšifruotą virusą antivirusinei programinei įrangai aptikti yra paprasta, kol paties iššifruotojo kodas yra pakankamai ilgas ir pakankamai unikalus. Norėdami apgauti antivirusinius produktus, jie nusprendė įgyvendinti techninį ieškojimą, jie nusprendė įdiegti mutavusių iššifruoklių kūrimo būdus\cite{Szor:2005:ACV:1050957}. 
 
 \subsection{Polimorfinių virusų skenavimas}
 \label{sec:example}
 
-Polimorfiniai virusai gali iššifruoti jų iššifratorius iki daugybės skirtingų atvejų, kurie gali pasireikšti milijonais skirtingų formų. \cite{Szor:2005:ACV:1050957}
+Polimorfiniai virusai gali iššifruoti jų iššifratorius iki daugybės skirtingų atvejų, kurie gali pasireikšti milijonais skirtingų formų\cite{Szor:2005:ACV:1050957}. 
 
 \subsection{Metamorfinių virusų skenavimas}
 \label{sec:example}
 
-Metamorfiniai virusai neturi iššifruotojo ar nuolatinio viruso kūno, tačiau sugeba sukurti naujas kartas, kurios atrodo kitaip. jie nenaudoja duomenų srities užpildo su styginių konstantomis, tačiau turi vieną vieno kodo pagrindą, kuris duomenis kaupia kaip kodą. \cite{Szor:2005:ACV:1050957}
+Metamorfiniai virusai neturi iššifruotojo ar nuolatinio viruso kūno, tačiau sugeba sukurti naujas kartas, kurios atrodo kitaip. jie nenaudoja duomenų srities užpildo su styginių konstantomis, tačiau turi vieną vieno kodo pagrindą, kuris duomenis kaupia kaip kodą\cite{Szor:2005:ACV:1050957}. 
 
 \newpage
 \section{Gerosios praktikos}
 \label{sec:motivation}
-
 \subsection{Atviro ir uždaro kodo programinė įranga}
 \label{sec:example}
 
-Visame pasaulyje vis daugiau dėmesio skiriama atvirojo kodo programinei įrangai, ypač operacinei sistemai "Linux" ir įvairioms programoms kurios būtent veikia su šia operacinę sistema. Įvairios didžiosios įmonės ir vyriausybės vis labiau priema atviro kodo modelį. Dėl to yra daugybė publikacijų apie atviro kodo pranašumus ir trūkumus. Vykstančios diskusijos apima platų temų spektrą, pavyzdžiui, „Windows“ lyginimas su „Linux“, išlaidų klausimus, intelektinės nuosavybės teises, kūrimo metodus ir panašias temas. Atkreipiant dėmesį būtent į saugumo problemas susijusias su atviro kodo metodika, kompiuterių saugumo bendruomenėje tapo gana nusistovėjęs įsitikinimas, kad dizaino ir protokolų publikavimas prisideda prie jų pagrindu sukurtų sistemų saugumo. \cite{HoepmanJaap} Bet ar iš tiesų išeities kodo publikavimas prisideda sistemos saugumo daugiau negu uždaras išeities kodas? Šis klausimas sukelia daug diskusijų ir vieno aiškaus atsakymo niekada nebūna, dauguma specialistų sutinka su tokia nuomone, kad tiek uždaras kodas, tiek atviras kodas turi savų pliusų ir minusų. Todėl peršasi išvada, kad paprasto atsakymo nėra į šį klausimą, ir vienintelis sprendimas tokiai dilemai yra įsigilinti į abi šias metodikas, ir išsiaiškinti, kuo viena metodika pranašesnė už kitą, ir kur atsiranda trūkūmų
+Visame pasaulyje vis daugiau dėmesio skiriama atvirojo kodo programinei įrangai, ypač operacinei sistemai "Linux" ir įvairioms programoms kurios būtent veikia su šia operacinę sistema. Įvairios didžiosios įmonės ir vyriausybės vis labiau priema atviro kodo modelį. Dėl to yra daugybė publikacijų apie atviro kodo pranašumus ir trūkumus. Vykstančios diskusijos apima platų temų spektrą, pavyzdžiui, „Windows“ lyginimas su „Linux“, išlaidų klausimus, intelektinės nuosavybės teises, kūrimo metodus ir panašias temas. Atkreipiant dėmesį būtent į saugumo problemas susijusias su atviro ir uždaro kodo metodika, kompiuterių saugumo bendruomenėje tapo gana nusistovėjęs įsitikinimas, kad dizaino ir protokolų publikavimas prisideda prie jų pagrindu sukurtų sistemų saugumo\cite{hoepman2008increased}. Bet ar iš tiesų išeities kodo publikavimas prisideda sistemos saugumo daugiau negu uždaras išeities kodas? Šis klausimas sukelia daug diskusijų ir vieno aiškaus atsakymo niekada nebūna, dauguma specialistų sutinka su tokia nuomone, kad tiek uždaras kodas, tiek atviras kodas turi savų pliusų ir minusų. Todėl peršasi išvada, kad paprasto atsakymo nėra į šį klausimą, ir vienintelis sprendimas tokiai dilemai yra įsigilinti į abi šias metodikas, ir išsiaiškinti, kuo viena metodika pranašesnė už kitą, ir kur atsiranda trūkūmų.
 
-\subsubsection{Trūkumai atviro kodo programinės įrangos}
+\subsubsection{Atviro kodo programinė įranga}
 \label{sec:data}
 Argumentai prieš atvirą kodą:
 \begin{itemize}
-	\item Atviras kodas suteikia didelį pranašumą atakuojančiui asmeniui dėl spragų radimo, atakuojančiam asmeniui reikia surasti vieną spragą su kuria jis galėtu sekmingai užpulti sistemą, o programuotojams reikia ištaisyti visas spragas, kurios leistu atakuojančiam asmeniui sekmingai užpulti sistemą.\cite{HoepmanJaap}
-	\item Yra didelis skirtumas tarp atviro dizaino ir atviro kodo. Atviras dizainas gali atskleisti logines klaidas kurios gali pakenkti sistemos saugumui. Bet skyrus pakankamai dėmesio tam, šios klaidos gali būti rastos ir ištaisytos, skirtingai negu atvirame kode kur klaidos yra aptinkamos daug sunkiau. \cite{HoepmanJaap}
-	\item Atakuotojai gali apsimesti programuotojais kurie nori prisidėti prie atviro kodo sistemos kurimo ir palaikymo siulydami savo pataisymus kuriuose slepiasi \textit{backdoor} ar kitas klaidinantis kodas kuris iš pirmo žvilgsnio atlieka savo funkciją, bet įsigilinus matosi, kad tas kodas skirtas suteikti pranašumą puolėjuj. \cite{951496}
-	\item Kodo uždarymas užkerta kelią atakuojančiui asmeniui lengvai gauti informacijos apie sistemą ir jos spragas, priešingai negu laikant kodą atvira. Laikant kodą atvira atakuojantis asmuo gali labai lengvai rasti spragas, kurios jam padėtų įsilaužti į sistemą, arba jai pakenkti. \cite{HoepmanJaap}
-	\item Viena iš didžiausių priežasčių kodėl atviras kodas nėra idealus pasirinkimas yra tai, kad kodo atvirumas negarantuoja, kad kodą peržiurės kvalifikuoti specialistai, kurie suteiks savo įžvalgas. Atviro kodo projektai daug dažniau nustoja būti aktyvus negu uždaro kodo projektai, kadangi jie būna nebepalaikomi, rastos klaidos nebėra taisomos, o sistemą kuri naudoja tokį kodą turi didelią saugumo spagą. \cite{951496}
+	\item Atviras kodas suteikia didelį pranašumą atakuojančiui asmeniui dėl spragų radimo. Atakuojančiam asmeniui reikia surasti vieną spragą su kuria jis galėtu sekmingai užpulti sistemą, o programuotojams reikia ištaisyti visas spragas, kurios neleistu atakuojančiam asmeniui to padaryti\cite{brown2002opening}.
+	\item Yra didelis skirtumas tarp atviro dizaino ir atviro kodo. Atviras dizainas gali atskleisti logines klaidas kurios gali pakenkti sistemos saugumui. Bet skyrus pakankamai dėmesio ir peržiurėjus kodą pakankamai gerai, šios klaidos gali būti rastos ir ištaisytos, skirtingai negu atvirame kode kur klaidas aptikti yra ženkliai sunkiau \cite{hoepman2008increased}.
+	\item Atakuotojai gali apsimesti programuotojais kurie nori prisidėti prie atviro kodo sistemos kurimo ir palaikymo siulydami savo pataisymus kuriuose slepiasi \textit{backdoor} ar kitas klaidinantis kodas kuris iš pirmo žvilgsnio atlieka savo funkciją, bet įsigilinus pasimato, kad šie pataisymai yra skirti suteikti pranašumą puolėjuj\cite{951496}. 
+	\item Kodo uždarymas užkerta kelią atakuojančiui asmeniui lengvai gauti informacijos apie sistemą ir jos spragas, priešingai negu laikant kodą atvira. Laikant kodą atvira atakuojantis asmuo gali labai lengvai rasti spragas, kurios jam padėtų įsilaužti į sistemą, arba jai pakenkti\cite{hoepman2008increased}. 
+	\item Viena iš didžiausių priežasčių kodėl atviras kodas nėra idealus pasirinkimas yra tai, kad kodo atvirumas negarantuoja, kad kodą peržiurės kvalifikuoti specialistai, kurie suteiks savo įžvalgas\cite{951496}. 
+	\item Atviro kodo projektai daug dažniau nustoja būti aktyvus negu uždaro kodo projektai dėl finansinių ar kitų priežasčių. Kadangi projektai būna neaktyvus ir nebepalaikomi, rastos klaidos nebėra taisomos, o sistemą kuri naudoja tokį produktą, turi didelią saugumo spagą\cite{951496}. 
 \end{itemize}
 
-\subsubsection{Trūkumai uždaro kodo programinės įrangos}
+Argumentai už atviro kodo programinę įranga:
+\begin{itemize}
+	\item Atidarant kodą visiems, yra lengviau ir greičiau identifikuoti problemas, negu uždarant kodą. Atidarius koda visiems, jį vertina ne tik kurėjai, bet ir vartotojai, bei kitos grupės žmonių, kurių deka spragos yra pamatos daug ankščiau lyginant su uždaro kodo produktais, taip pat jas pastebėti yra žymiai lengviau dėl būtent bendruomenės, išvengiama rizika, kad spraga bus nepastebėta ilgą laiką kol ją išnaudos nuostolio siekentys žmonės\cite{10.5555/580808}.
+	\item Žmonės naudojantys atviro kodo programinė įrangą galės patys surasti ir sutvarkyti problemas kilusias su produktu, tuo atvėju jie gali savo pataisymus siulyti į pagrindinę produkto repozitoriją, tokie pataisymai bus patvirtinti ir atsiras pačiame produkte, tuomet kiti žmonės galės parsisiusti šiuos pakeitimus pas save, taip padidindami savo sistemos saugumą. "\textit{Linus's law: Given enough eyeballs, all bugs are shallow}\cite{Meneely:2009:SOS:1653662.1653717}"
+\end{itemize}
+
+\subsubsection{Uždaro kodo programinė įranga}
 \label{sec:data}
 Argumentai prieš uždarą kodą:
 \begin{itemize}
-	\item Uždaro kodo programinės įrangos kodo kokybė dažnai nėra tokia aukšta kaip galima būtų tikėtis, dažnai manoma kad atviro kodo projektuose kokybės kontrolė būna beveik neegzistuojanti, ir ją užtikrinti yra gan sunku dėl didelio skaičiaus žmonių kurie nori prisidėti prie projekto, jų kodas buna tikrinamas pavirsutiniskai dėl laiko taupymo to rezultatas yra prasta kodo kokybė ir didejantis potencialas spragoms. Bet kaip galima pastebėti, paviešistas kodas kuris visada buvo uždaras dažnai būna ypatingai prastos kokybės ir iš to paviešinto kodo spragos būna išgaunamos labai greitai. Saugumo specialistai analizuojantys greitai atranda spragas ir paviešina įrankius, skirtus išnaudoti tokias spragas, vieni geriausių pavyzdžių yra kai kaikurios Microsoft Windows NT 4.0 produkto kodo dalys buvo paviešintos, keliu dienų eigoje pirmieji įrankiai buvo sukurti išnaudoti spragas esančias šiame produkte. \cite{HoepmanJaap}
-	\item Uždaras kodas neužtikrina, kad spragos nebus rastos, nors kodas ir yra neprieinamas, vis tobulėjantys irankiai skirti dekompiliuoti produktą tam, kad išgauti jame esanti kodą ir rasti spragas, palengvina darbui saugumo specialistams ir asmenims kurie nori pasinaudoti išgautomis spragomis. Dažni atvėjai kai uždaro kodo produkto spragos būna paviešinamos, šios spragos būna užtaisomos atnaujinimais, bet kaikurios spragos būna rastos ir nepaviešintos tam, kad niekad jų nesutvarkytų, ir atakuojantys asmenys turetu ilgesnį laiką išnaudoti šias spragas. Iš to galima teigti, kad nors ir spragos buna lečiau ir sunkiau surandamos uždarame produkte, tų spragų paviešinimas yra daug greitesnis potencialiai atviro kodo produktuose. \cite{HoepmanJaap}
-	\item Atviro kodo produktai pasižymi savo bendruomenė, dažnai prie atviro kodo produkto gali prisidėti visi kas tik sugeba. Todėl dažnai kodas būna tvarkomas daug greičiau, vartotojai patys randa problemas kode, informuoja apie tai kurėjus, dažnai net pasiulo savo sprendimus, tokiais atvėjais kurėjams nebereikia patiems investuoti laiko sprendžiant problemą, užtenka tiesiog peržiurėti vartotojo sprendimą, ir jei viskas tinka jį pritaikyti. Tuo nepasižymi uždaro kodo produktai, vartotojai beveik negali, arba išvis negali prisidėti prie produkto kurimo, jie negali kurėjams patarti su produkto kurimu, ar padėti ištaisyti klaidas. Kurėjai turi patys aiškintis tas klaidas, ir dažnai tokių problemų sprendimas užtrunka ilgai nes tam reikia investuoti laiko ir resursų. Labai opių spragų sprendimas kartais užtrunka savaites ar net mėnesius. \cite{HoepmanJaap}
+	\item Uždaro kodo programinės įrangos kokybė dažnai nėra tokia aukšta kaip galima būtų tikėtis. Manoma, kad atviro kodo projektuose kokybės kontrolė būna beveik neegzistuojanti, ir ją užtikrinti yra gan sunku dėl didelio skaičiaus žmonių kurie nori prisidėti prie projekto, jų kodas buna tikrinamas pavirsutiniskai dėl laiko taupymo to rezultatas yra prasta kodo kokybė ir didejantis potencialas spragoms. Bet kaip galima pastebėti, paviešistas kodas kuris visada arba ilgai buvo uždaras dažnai būna ypatingai prastos kokybės ir iš to paviešinto kodo spragos būna išgaunamos labai greitai. Viena iš to priežasčių galima būtų teigti, kad parašytas kodas uždarame projekte patikrinimas ženkliai mažiau žmonių negu atviro projekto kodas, kurį gali tikrinti visi. Saugumo specialistai analizuojantys tokį kodą greitai atranda spragas ir paviešina įrankius, skirtus išnaudoti tokias spragas. Vienas pavyzdžių  kai kaikurios Microsoft Windows NT 4.0 produkto kodo dalys buvo paviešintos, keliu dienų eigoje pirmieji įrankiai buvo sukurti tam, kad išnaudotų spragas esančias šiame produkte\cite{hoepman2008increased}. 
+	\item Uždaras kodas neužtikrina, kad spragos nebus rastos, nors kodas ir yra neprieinamas, vis tobulėjantys irankiai skirti dekompiliuoti produktą tam, kad išgauti jame esanti kodą ir rasti spragas, palengvina darbui saugumo specialistams ir asmenims kurie nori pasinaudoti išgautomis spragomis. Dažni atvėjai kai uždaro kodo produkto spragos būna paviešinamos, šios spragos būna užtaisomos atnaujinimais, bet kaikurios spragos būna rastos ir nepaviešintos tam, kad niekad jų nesutvarkytų, ir atakuojantys asmenys turetu ilgesnį laiką išnaudoti šias spragas. Iš to galima teigti, kad nors ir spragos buna lečiau ir sunkiau surandamos uždarame produkte, tų spragų paviešinimas yra daug greitesnis potencialiai atviro kodo produktuose\cite{mishra2002quality}. 
+	\item Atviro kodo produktai pasižymi savo bendruomenė, dažnai prie atviro kodo produkto gali prisidėti visi kas tik gali. Todėl kodas būna tvarkomas daug greičiau, vartotojai patys randa problemas kode, informuoja apie tai kurėjus, dažnai net pasiulo savo sprendimus. Tokiais atvėjais kurėjams nebereikia patiems investuoti laiko sprendžiant problemą, užtenka tiesiog peržiurėti vartotojo sprendimą, ir jei viskas tinka - jį pritaikyti. Tuo nepasižymi uždaro kodo produktai, vartotojai beveik negali, arba išvis negali prisidėti prie produkto kurimo. Vartotojai taip pat negali kurėjams patarti produkto kurimo klausimais, ar padėti ištaisyti klaidas. Kurėjai turi patys aiškintis tas klaidas ir dažnai tokių problemų sprendimas užtrunka ilgai, nes tam reikia investuoti daug laiko ir resursų labai opių spragų sprendimas kartais užtrunka savaites ar net mėnesius\cite{hoepman2008increased}. 
 \end{itemize}
 
-\subsubsection{Privalumai atviro kodo programinės įrangos}
-\label{sec:data}
-
-Argumentai už atviro kodo programinę įranga
-\begin{itemize}
-	\item Atidarant kodą visiems, yra lengviau ir greičiau identifikuoti problemas, negu uždarant kodą. Atidarius koda visiems, jį vertina ne tik kurėjai, bet ir vartotojai, bei kitos grupės žmonių, kurių deka spragos yra pamatos daug ankščiau lyginant su uždaro kodo produktais, taip pat jas pastebėti yra žymiai lengviau dėl būtent bendruomenės, išvengiama rizika, kad spraga bus nepastebėta ilgą laiką kol ją išnaudos nuostolio siekentys žmonės.
-	\item Žmonės naudojantys atviro kodo programinė įrangą galės patys surasti ir sutvarkyti problemas kilusias su produktu, tuo atvėju jie gali savo pataisymus siulyti į pagrindinę produkto repozitoriją, tokie pataisymai bus patvirtinti ir atsiras pačiame produkte, tuomet kiti žmonės galės parsisiusti šiuos pakeitimus pas save, taip padidindami savo sistemos saugumą. "\textit{Linus's law: Given enough eyeballs, all bugs are shallow}" \cite{Meneely:2009:SOS:1653662.1653717}
-\end{itemize}
-
-\subsubsection{Privalumai uždaro kodo programinės įrangos}
-\label{sec:data}
-
+Argumentas už uždaro kodo saugumą yra toks, kad uždaras kodas gali turėti spragų kurias galėtų išnaudoti atakuojantys asmenys, bet atsiranda daug didesnis šansas, kad jų tiesiog neišnaudos, nes apie jas nežinos\cite{ford2007open}.  Priešingai negu atviro kodo programinės įrangos spragas, kurias rasti yra neitikėtinai daug lengviau ir rasti gali bet kas ir apie tai neprivalo pranešti. Tuomet gali galvoti kaip tai išnaudoti savo reikmėms, net jeigu ir spraga yra užtaisoma greitai, nereiškia, kad tuo užtaisymu nėra padaroma kita spragą, kuria kiti asmenys vėl taip pat lengvai gali rasti ir išnaudoti. Kaip pavyzdi, galima žiurėti į Microsoft Windows NT 4.0 produkto spragas prieš paviešinimą, jos buvo daugybe metų, bet jų niekad nerado ir neišnaudojo, kai kodas buvo nutekintas, jas rado per pirmas kelias dienas\cite{hoepman2008increased}.  Galima teigti, kad labai gerai prižiūrimas uždaras kodas turi tikrai didelį pliusą, nes jeigu ir jame yra spraga, gali būti kad jos niekas ilgai neras, o tuo tarpu patys kurėjai ją turi laiko pastebėti daug daugiau\cite{schryen2009open}.
 
 \subsubsection{Apibendrinimas}
 \label{sec:data}
-Atvirojo kodo programinė įranga yra iš esmės saugesnė nei uždarojo šaltinio ir kiti teigė, kad taip nėra. Nei vienas iš atvejų nėra tiesa: jos iš esmės yra tos pačios monetos skirtingos pusės. Atviras šaltinis suteikia tiek užpuolikams, tiek gynėjams didesnę analitinę galią ką nors padaryti dėl programinės įrangos spragų. Jei gynėjas nieko nedaro dėl saugumo, atvirasis šaltinis tiesiog suteikia tą pranašumą užpuolikui. Tačiau atvirasis šaltinis taip pat siūlo didelius pranašumus gynėjui, suteikdamas prieigą prie saugumo metodų, kurių paprastai neįmanoma pasiekti uždarojo kodo programinėje įrangoje. Uždaras šaltinis verčia vartotojus sutikti su tokio kruopštumo lygiu, kokį pasirenka pardavėjas, tuo tarpu atvirojo kodo vartotojai (ar kiti žmonių kolektyvai) gali pakelti saugos juostą taip aukštai, kaip jie nori.(Cowan2003)(netaisytas)
-
-Padidėjęs žiniasklaidos ir plačiosios visuomenės dėmesys atviram šaltiniui pavertė atvirojo kodo frazę beveik visa apimančia. Čia mes naudojame ją originalia, gana specifine prasme. Atvirojo kodo programinė įranga yra programinė įranga, kurią vartotojas gali patikrinti, naudoti, modifikuoti ir perskirstyti atitinkamą šaltinį (ir visą susijusią dokumentaciją )1. Mes neišskiriame jokios kūrimo metodikos (pvz., Katedra ar Turgus [10]). Mums taip pat nerūpi kainodaros modelis (nemokama programinė įranga, bendro naudojimo programinė įranga ir kt.). Tačiau mes darome prielaidą, kad vartotojams (iš esmės) leidžiama ir jie gali atstatyti sistemą iš (modifikuotų) šaltinių ir kad jie turi prieigą prie tinkamų įrankių, kad tai padarytų. Kai kuriais atvejais taip pat būtina leisti vartotojui perskirstyti modifikuotus šaltinius (visiškai arba per pataisas) (pvz., Nemokama programinė įranga ir GNU viešoji licencija2). Daugelis mūsų argumentų taip pat galioja turimai šaltinio programinei įrangai, kur licencija neleidžia perskirstyti (modifikuoto) šaltinio. (0801,3924)(netaisytas)
+Saugesnė atvirojo kodo programinė įranga ar uždaro kodo programinė įranga? Galima teigti, kad dižiausias atviro kodo pliusas yra tai kad vartotojas gali peržiurėti programos kodą prieš ją naudodamas, skirtingai negu uždaro kodo programinė įranga, kuria vartotojas turi pasitikėti aklai\cite{Cowan:2003:SSO:858866.859050}. Atviro kodo programinė įranga tiek užpuolikams, tiek gynėjams suteikia didesnę galimybę imtis veiksmų, vienintelis klausimas, kas pirmas pastebės spraga, ir ką su ja darys\cite{mishra2002quality}. Uždaro kodo programinė įranga turiu pliusų žiurint iš komercinės prasmės, bet iš saugumo pusės - sakymas, kad saugumą užtikrina kodo slepimas, galima teigti, kad jis yra labai nepasitvirtines ir turint dabartines dekompiliavimo galimybės, nebegali teigti, kad tai yra tiesa \cite{hoepman2008increased}. Taigi, atsižvelgiant į visus argumentus ir pavyzdžius, galima teigti, kad saugumo prasme, geresnis pasirinkimas būtų rinktis atviro kodo produktus savo sistemai.
 
 
 \newpage
@@ -269,38 +240,148 @@ Padidėjęs žiniasklaidos ir plačiosios visuomenės dėmesys atviram šaltiniu
 \label{sec:example}
 
 Kurimo darbo metu buvo vadovaujamasi šiuo darbo tikslu: Sukurti saugų pažeidžiamumų skenavimo įrankį, kuris veiktu iš tam tikros slepiamos vietos, skenuotų internetinę
-svetainę bei jos failus, aptiktų pažeidžiamumus ar modifikuotus failus, ir pateiktų klientui informaciją apie skenavimo rezultatus. Šis darbas buvo pasiektas tokiais veiksmais:
+svetainę bei jos failus, aptiktų pažeidžiamumus ar infekuotus failus, ir pateiktų klientui informaciją apie skenavimo rezultatus. Šis tikslas pasiektas tokiais veiksmais:
 \begin{itemize}
-	\item Užtikrinti saugų ryšį tarp įrankio ir skanuojamos sistemos naudojant VPN, šiuo atveju yra naudojama OpenVPN technolgija.
-	\item Sukurti saugią aplinką į kurią galima būtų siusti potencialiai užkrėtus failus, šiam veiksmui įgyvendinti buvo pasitelkta Docker konteinerių technologija.
-	\item Išorinis internetinės svetainės skanavimas pažeidžiamumu skanavimas naudojant Nmap įrankį, bandand išgauti kuo daugiau informacijos iš sistemos, ieškant atidarytų prievadų ar besisukančių sistemų skenuojamoje sistemoje
-	\item Išorinis internetinės svetainės skanavimas pažeidžiamumu skanavimas naudojant Nmap įrankį, bandand silpnus prisijungimus...
-	\item Parsiustus failus tikrinti viešai prieinamuosia API, kurie patikrina ar failas arba jo turinys nėra potencialiai infekuotas ir kelią grėsmę, tam buvo pasitelkta Team-Cymru Malware Hash Registry API.
+	\item Užtikrinamas saugus ryšys tarp įrankio ir skanuojamos sistemos;
+	\item Sukurta saugi aplinka į kurią galima būtų siusti potencialiai užkrėtus failus;
+	\item Išorinis sistemos skanavimas, bandant išgauti kuo daugiau informacijos iš sistemos, ieškant atidarytų prievadų ar beveikenčių sistemų skenuojamoje sistemoje;
+	\item Tikrinamas pats svetainės adresas, ar yra saugu eiti į jį;
+	\item Parsisiusti failai iš nurodyto \textit{FTP} serverio yra tikrinami ar jų tūriniai nėra potencialiai infekuoti ir kelentys grėsmę;
 \end{itemize}
-Apie šių tikslų igyvendima ir sistemos struktūra bus rašoma detaliau
 
-\subsubsection{Saugaus ryšio užtikrinimas}
 
-\subsubsection{Saugios aplinkos užtikrinimas}
 
-\subsubsection{Išorinis sistemos skanavimas}
+\subsection{Įrankio architektūra}
 
-\subsubsection{Sistemos failu patikrinimas}
+Skenavimo įrankio architektūra yra paremta Nessus įrankio architektūra, vartotojo sąsaja tiesiogiai nebendrauja su servisu, kuris vykdo visus skenavimo procesus. Visa architektūra yra modulinė - išskirstyta per tris atskiras sistemas. Tokia architektūra buvo pasirinkta dėl sistemos saugumo ir stabilumo. Vienai sistemai sutrikus, sutrikimas visiškai neįtakoja kitų sistemų. Taip pat, jeigu įvyktų įsilaužimas į viena iš sistemų, įsilaužėliai neturėt prieigos prie viso projekto.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figs/arch1lt.png}
+	\caption{Sistemos architektūros schema}
+	\label{fig:arch1}
+\end{figure}
+
+Sistemos architektūros schemoje \ref{fig:arch1} pavyzdyje, matome tris sistemas - internetinės svetainės sistemą, duomenų bazės sistemą ir serviso sistemą. Internetinės svėtainės sistemoje veikia pati internetinė svetainė, kurioje vyksta prisijungimas prie sistemos, skenavimo užklausu kurimas, ir skenavimo atąskaitų parsisiuntimas. Duomenų bazės sistemoje veikia pati duomenų bazė, kurios paskirtis yra laikyti skenavimo užklausas ir jų rezultatus, taip pat laikyti prisijungo duomenis. Serviso sistema veikia pats servisas kuris atlieką visa skenavimo logiką ir visą bendravima su skenuojama internetine svetaine. Taip pat bendrauja ir su duomenų baze, iš jos pasiema visus duomenis reikalingus skenavimui ir į ją deda visus skenavimo rezultatus. 
+
+UI aplikacija internės svetainės sistemoje sukurta naudojant Angular. WebApi kuris atsakingas už visą bendravima su duomenų baze bei skenavimo ataskaitų formavima, sukurtas naujant ASP.NET Core. 
+Duomenų bazė sukurta naudojant Microsoft SQL. Serviso sistemoje esanti serviso aplikacija sukurta naudojant .NET Core su kuriuo parašyta visa pararelinė skenavimų paleidimo logika ir bendravimas su duomenų baze, Bash scriptus, kurie skirti kurti konteinerius ir vykdyti skenavimus, Docker kuris skirtas kurti konteinerius ir užtikrinti visos sistemos saugumą ir stabilumą. Visos sistemos naudoja Ubuntu 16.04 operacinę sistemą. 
+
+\subsection{Vartotojo sąsaja}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figs/Activitylt.png}
+	\caption{Aktyvumo diagrama}
+	\label{fig:activity}
+\end{figure}
+
+Aktyvumo diagramoje kuri yra \ref{fig:activity} pavyzdyje, galima matyti visus pasirinkimus kuris vartotojas turi. Vartotojo sąsaja sukurta naudojant Angular, visi atliekami veiksmai keliauja į API kuris sukurtas su ASP.NET Core. API vyksta visa internetinės svetainės logika - autentifikacijos valdymas, bei duomenų valdymas. Jungimosi metu į UI suvedami duomenys keliauja į API, kuriama prisijungimo duomenys yra verifikuojami su duomenų baze. Sekmingai prisijungus, vartotojas gali arba kurti naują skenavimo užklausą, arba pamatyti jau sukurtas. Kuriant skenavimo užklausa, duomenys taip pat yra tikrinami, patikrinus ir sekmingai užregistravus skenavimo užklausa, vartotojas gali eiti į skenavimų sąraša, kur bus pateikta jo sukurtiems skenavimas ataskaitų parsisiuntimo nuorodos, arba jis gali kurti vėl naują užklausą.
+
+\subsection{Saugios aplinkos užtikrinimas}
+
+Internetinių svėtainių skenavimo įrankyje saugi aplinka užtikrinama naudojant Docker, kuris pasižymi tuo, kad su ja yra kuriami konteineriai, kurie yra izoliuoti nuo likusios sistemos. Pačia Docker technologiją galima lyginti su virtualiomis mašinomis kurias pavyzdžiui kuria VirtualBox įrankis. Skirtumas tarp jų vis dėl to yra didžiulis. Docker konteineriai yra kuriami operacinės sistemos lygyje skirtingai negu VirtualBox virtualios mašinos, taip pat kiekviena virtuali mašina turi turėti savo atskirą operacinę sistemą, o konteineriai tiesiog naudoja tapačia opericinę sitema kurioje jie yra kuriami, todėl konteineriai reikalauja žymiai mažiau išteklių, veikia žymiai greičiau, juos galima greitai kurti ir naikinti\cite{merkel2014docker}. Visa tai yra svarbu sistemai, nes kiekvienam procesui yra kuriamas atskirame konteineris, po kiekvieno proceso įgyvendinimo, konteineris yra sunaikinamas. Konteineriu greitis leidžia tai padaryti greitai ir saugiai, nėra priežasties kodėl konteinerius reiktų pernaudoti, nereikia surašinėti atskirai operacinių sistemų ir jas konfiguruoti, taip pat mažas resursu kiekis nestabdo visos sistemos bendrai, ir užtikrina, kad sistemą nesustos veikti.
+
+\subsection{Skenavimo užklausų įgyvendinimas NEPABAIGTA}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figs/Full.png}
+	\caption{Įrankio pilna veikimo schema}
+	\label{fig:full}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figs/1Containerlt.png}
+	\caption{Konteinerių sukurimas}
+	\label{fig:1Container}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figs/2Containerlt.png}
+	\caption{Proceso Veikimas}
+	\label{fig:2Container}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figs/3Containerlt.png}
+	\caption{Rezultatų gražinimas}
+	\label{fig:3Container}
+\end{figure}
+
+\subsubsection{Igyvendinami skenavimo metodai}
+
+
+
+\paragraph{Išorinis sistemos skenavimas}
+Išorinis sistemos skenavimas skirtas tam, kad aptiktų atvirus prievadus, patikrinti, kokią informacija išduota pati sistema - kokią operacinę sistemą pati sistema naudoja, kokia tos operacinės sistemos versija, kokios aplikacijos ar sistemos veikia toje sistemoje, ar prie šių sistemų galima jungtis, ar gali prisijungti anoniminei vartotojai. Skenavimo įgyvendinimo metu yra sukuriamas konteineris, iš kurio yra atliekamas skenavimas. Skenavimui pasibaigus yra surenkami rezultatai ir atiduodami servisui, konteineris yra saugiai sunaikinamas, o rezultatai patalpinami į duomenų bazę.
+\paragraph{Failų skenavimas}
+Internetinės sistemos failų skevimas skirtas tam, kad patikrinti ar į sistemą jau nebuvo isilaužta, ir joje nėra paliktu \textit{malware}. Šis skenavimas yra įgyvendinimas skenavimo užklausos metu. Sukuriamas Docker konteineris, iš kurio naudojant \textit{FTP} prisijungiama prie sistemos. Iš \textit{FTP} direktorijos yra parsiunčiami visi failai į konteineri, tuomet yra generuojami visų failų MD5 maišos žodžiai, kurie yra paruošiami tikrinimui ir yra patikrinami žinomų \textit{malware} failų MD5 maišos žodžių duomenų bazėje. Tuomet rezultatai yra gražinami į servisą, o pats konteineris yra saugiai sunaikinamas. Rezultatai patalpinami į duomenų bazę.
+\paragraph{Internetinės svėtainės prieigos skenavimas}
+Internetinės svėtainės prieigos skenavimas yra skirtas tam kad aptiktų potencialias \textit{MITM} atakas, \textit{Phishing} svėtaines, \textit{malware} svėtaines. Veikimas yra toks, kad svetainės adresas yra nusiunčiamas trečiajai šaliai, kuri svetainės adresą skenuoja su įvairiomis antivirusinėmis. Tuomet yra pateikiama detali ataskaita. Kadangi šio skenavimo metu nera kontaktuojama su pačia svetaine tiesiogiai, Docker konteineriai nėra kuriami.
+\paragraph{Internetinės svėtainės enumeravimas}
+Internetinės svėtainės enumeravimas yra skirtas tam, kad aptiktu potencialias internetinės svėtainės spragas tokias kaip atviras direktorijas, kuriose puolėjas gali be jokių kliučių perskaityti jose ęsančių failų turinį. Taip pat aptinkama visi internetinės svetainės puslapiai, prie kurių vartotojas gali prieiti be jokios autentifikacijos, sakykime prie administratoriaus puslapio, šios problemos kyla dėl blogai sukonfiguruotų teisių ar pačio puslapio autentifikacijos. Skenavimo metu yra sukuriamas konteineris, kuriame vykdomas enumeravimas, konteineryje susigeneruoja rezultatų failas, kuris yra gražinamas servisui, o pats konteineris yra saugiai sunaikinamas. Rezultatai yra patalpinami į duomenų bazę.
+
+\subsection{Įrankio Skenavimo metodų platforma}
+
+Įrankis yra puikiai pritaikytas naudoti bet kokioje sistemoje, taip pat jį ypač patogu pritaikyti bet kokia scenarijuje. Šis įrankis yra plačiai naudojamas kibernetinio saugumo bendruomeneje ir taip pat yra ypač efektyvus atliekant tinklo skanavimus ar analizę. Atsisžvelgus į šiuos faktus, šis įrankis tampa butinybė bet kokioje spragų skanavimo sistemoje dėl savo didelio potencialo ir bendruomenės pasitikėjimo.
+\begin{algorithm}
+	\caption{Įrankio platformos pseudo kodas}
+	\label{alg:pseudo}
+	\begin{algorithmic}
+		\STATE $ScanRequests \gets Database$
+		\IF{$ScanRequests > 0$}
+		\FORALL {$ScanRequests$}
+		\STATE $ThreadPool \gets Scan1(ScanRequest)$
+		\STATE $ThreadPool \gets Scan2(ScanRequest)$
+		\STATE $ThreadPool \gets Scan3(ScanRequest)$
+		\STATE $ThreadPool \gets Scan4(ScanRequest)$
+		\STATE $ThreadPool. Wait For All$
+		\ENDFOR
+		\STATE $Database \gets ThreadPool.Results$
+		\ENDIF
+	\end{algorithmic}
+\end{algorithm}
+
+
+Įrankio kurimo metu buvo sukurta platforma, kuri yra integruota į patį įranki. Platforma yra skirta lengvai pridėti naujus skenavimo būdus ir funkcijas. Iš šios platformos yra startuojami visi jau esantis skenavimo metodai. Naujų skenavimo metodu pridėjimas vyksta programiškai, bet pati platforma parašyta taip, kad norint pridėti kažka naujo, nereikia programuoti visko per naujo. Šios platformos kodą galime matyti \ref{alg:pseudo} algoritme. Iš pradžių pasiemame visas skenavimo užklausas kurios dar nebuvo vykdytos iš duomenų bazės, tuomet iteruojame per kiekviena iš jų ir parareliai paleisdžiame visus skenavimo metodus. Kai visi skenavimo metodai yra pasileide, laukiame, kol visi jie pasibaigs. Visiems skenavimams pasibaigus, resultatus patalpiname į duomenų bazę.
+
 
 \subsection{Aptiktini pažeidžiamumai}
+
+Šiuo metu skenavimo įrankis gali aptikti šiuo pažeidžiamumus:
+\begin{itemize}
+	\item Aptiktinos yra \textit{MITM} atakos tikrinant internetinės svetainės atsakus;
+	\item Aptiktinos direktorijos, kurios sąrašo pavidalu gražina savo turinį, taip atsitinka dėl neteisingai sudėtų teisių sistemoje, dėl šio pažeidžiamumo puolėjas atrades šia direktoriją gali be jokių kliučių peržiurėti joje esančius failus;
+	\item Aptiktini puslapiai, prie kurių neprisijunges vartotojas neturėtu galimybės prieiti. Kaip pavyzdį galima būtų pateikti prisijungimo vietas prie administratoriaus sąsajos;
+	\item Aptiktinkami \textit{Malware} ir infekuoti failai;
+	\item Aptinkamos sistemos, kurios veikia skenuojamoje sistemoje;
+	\item Aptinkami atidaryti prievadai.
+\end{itemize}
+
+\subsection{Įgyvendinti tikslai}
 \label{sec:example}
+Įgyvendinti šie apsibrėžti tikslai: 
+\begin{itemize}
+	\item Sukurta svėtainė, kuri leidžia vartotojuj kurti skenavimo užklausas, ir po jų sukurimo, leidžia atsisiusti suformatuotus rezultatus;
+	\item Sukurta platforma ir paruoštukai, kurie leidžia lengvai pridėti naujus skenavimo metodus į įrankį;
+	\item Sukurta saugi aplinka, kuri leidžia vartotojuj saugiai skenuoti sistemas ir jų failus, nesibaiminant infekuoti pačio įrankio sistemos;
+	\item Aptinkami pažeidžiamumų ir pati sistema paruošta naudojimui;
+	\item Sugeneruojama ir pateikiama ataskaika kurią lengva suprasti vartotojuj.
+\end{itemize}
 
-Pateikiamas 4.5 poskyrio tekstas. Vienas iš šaltinių [?]. Visas turinys priklauso 4 skyriui.
-
-\subsection{Įgyvendinti lukeščiai}
-\label{sec:example}
-
-Pateikiamas 4.5 poskyrio tekstas. Vienas iš šaltinių [?]. Visas turinys priklauso 4 skyriui.
 
 \subsection{Trūkumai}
 \label{sec:example}
 
-Pateikiamas 4.5 poskyrio tekstas. Vienas iš šaltinių [?]. Visas turinys priklauso 4 skyriui.
+Įrankio kurimo metu buvo susidurta su daug problemų ir sunkumų, kurių pasekoje kaikurie planuoti tikslai nebuvo įgendinti. Pats įrankio kurimo procesas yra ypac sudetingas dėl didelio skaičiaus skirtingų technologijų, su kuriomis yra kuriamos internetinės svėtainės, taip pat kiekviena internetinė svetainė skiriasi nuo kitų savo sistemos komponentais, architektūra, naudojamomis technologijomis.
+
+Kurimo metu buvo planuota panaudoti trečios šalies įranki SqlMap. Šio įrankio paskirtis yra ieškoti ar internetinė svetainė yra pažeidžiama \textit{SQL injection} atakoms. Tokio tipo skenavimui reikėtų sukurti internetinės svėtaines puslapių kodo funkciją, kuri svetainės puslapyje iėško dinaminių nuorodų. Šios nuorodos priema parametrus savo nuorodose. Tuomet SqlMap įrankis bando į šiuos parametrus įdeti manipuliuotą tekstą kuris įvykdytų užklausą duomenų bazeje. Šio įrankio funkcionalumo įgyvendinimas šioje skenavimo sistemoje tapo perdaug problematiškas ir laiko užimantis dėl pačios funkcijos kuri ieškotų tokių įveščių internetinėje svėtainėje. Dėl šios priežasties SqlMap funkcionalumo tekta atsisakyti.
+
+Kurimo metu taip pat buvo užsibrežta įgyvendinti statinė analizę. Šis tikslas buvo įgyvendintas nepilnai, patys failai yra tikrinami žinomų \textit{Malware} duomenų bazėje, bet internetinės svėtainės kodas nėra tikrinamas. Šio tikslo tekta atsisakyti ir perkelti statinės analizės technikų įgyvendinimus į ateities darbus. Šio atsisakymo priežastis yra ta, kad kiekvienai programavimo kalbai reikalingas atskiras statinės analizės įgyvendinimas, kieviena kalba yra kitokia ir jos funkcionalumas ir sintaksė yra kitokia, dėl šios priežasties tokio funkcionalumo kurimo kaštai stipriai didėja.
 
 
  %Conclusions section
@@ -310,24 +391,35 @@ Pateikiamas 4.5 poskyrio tekstas. Vienas iš šaltinių [?]. Visas turinys prikl
 %ateities darbų gairės, planas/next steps of the work
 \sectionWithoutNumber{Ateities tyrimų planas}{future}{Pristatomi ateities darbai ir/ar jų planas, gairės tolimesniems darbams....}
 
+\subsection{Statinė kodo analizė NESKAITYTI}
+
+\subsubsection{Panaudojimas darbe}
+\label{sec:data}
+Vartotojui davus \textit{FTP} serverio adresą iš jo bus bandoma atsisiūsti išeities kodą. Atsisiuntus sistemos išeities kodą bus atliekama statinė analizė ir taip bus bandoma aptikti spragas ar scenarijus, kurie kelią potencialią grėsmę pačiai sistemai. Tokios grėsmės būtų - įsilaužimas, arba sistemos veikimo paveikimas, sugadinimas. 
+
+\subsubsection{Dinaminė kodo analizė}
+
+\subsubsection{Panaudojimas darbe}
+\label{sec:data}
+Dinaminė analizė bus taikoma spragų skenavimo sistemoje su kliento sutikimu. Analizės metu, bus bandoma į visas sistemos įvestis pateikti nenumatytu reikšmių, taip išbandant kuo daugiau nenumatytų scenarijų.
+
+
+\subsubsection{Vidinių pažeidžiamumų skenavimas}
+
+\subsubsection{Panaudojimas darbe}
+\label{sec:data}
+Įrankio vartotojas savo noru gali pateikti prisijungimus prie sistemos naudojant \textit{SSH} protokolą. Pasinaudojus šia informaciją įrankis prisijungs prie sistemos, ir naudodamas vidinės analizės komponentą, bandys surinkti kuo daugiau informacijos. Surinkus visą galimą informaciją, bus ieškomos potencialios spragos.
+
  %file References.bib
 \referenceSources{References}
 %\bibliographystyle{ieeetr}
 
 %% this part is optional
-\newpage
-\begin{appendices}
-Dokumentą sudaro du priedai: \ref{app:a} priede  ....
-\newpage
-\section{Pirmojo priedo pavadinimas}
-\label{app:a}
-Pirmojo priedo tekstas ...
+%%\newpage
+%%\begin{appendices}
 
-\newpage
-\section{Antrojo priedo pavadinimas}
-Antrojo priedo tekstas ...
 
-\end{appendices}
+%%\end{appendices}
 
 
 \end{document}

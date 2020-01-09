@@ -1,14 +1,74 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{inproceedings}
+Muharrem Aksu, Enes Altuncu, and Kemal Bicakci.
+\newblock A first look at the usability of openvas vulnerability scanner.
+\newblock 02 2019.
+
+\bibitem{asbjornslett1999assess}
+Bjorn~Egil Asbjornslett.
+\newblock Assess the vulnerability of your production system.
+\newblock {\em Production Planning \& Control}, 10(3):219--229, 1999.
+
+\bibitem{bayer2006dynamic}
+Ulrich Bayer, Andreas Moser, Christopher Kruegel, and Engin Kirda.
+\newblock Dynamic analysis of malicious code.
+\newblock {\em Journal in Computer Virology}, 2(1):67--77, 2006.
+
+\bibitem{brown2002opening}
+Kenneth Brown.
+\newblock {Opening the Open Source Debate A White Paper June 2002}.
+\newblock 2002.
+
+\bibitem{callegati2009man}
+Franco Callegati, Walter Cerroni, and Marco Ramilli.
+\newblock Man-in-the-middle attack to the https protocol.
+\newblock {\em IEEE Security \& Privacy}, 7(1):78--81, 2009.
+
+\bibitem{cowan1998stackguard}
+Crispan Cowan, Calton Pu, Dave Maier, Jonathan Walpole, Peat Bakke, Steve
+  Beattie, Aaron Grier, Perry Wagle, Qian Zhang, and Heather Hinton.
+\newblock Stackguard: Automatic adaptive detection and prevention of
+  buffer-overflow attacks.
+\newblock In {\em USENIX Security Symposium}, volume~98, pages 63--78. San
+  Antonio, TX, 1998.
 
 \bibitem{Cowan:2003:SSO:858866.859050}
 Crispin Cowan.
 \newblock {Software Security for Open-Source Systems}.
 \newblock {\em IEEE Security and Privacy}, 1(1):38--45, jan 2003.
 
-\bibitem{HoepmanJaap}
+\bibitem{fielding1999hypertext}
+Roy Fielding, Jim Gettys, Jeffrey Mogul, Henrik Frystyk, Larry Masinter, Paul
+  Leach, and Tim Berners-Lee.
+\newblock Hypertext transfer protocol--http/1.1, 1999.
+
+\bibitem{ford2007open}
+Richard Ford.
+\newblock Open vs. closed: which source is more secure?
+\newblock {\em Queue}, 5(1):32--38, 2007.
+
+\bibitem{grewal2017hybrid}
+Roshan Grewal.
+\newblock A hybrid approach of malware detection in android.
+\newblock 2017.
+
+\bibitem{gula1999passive}
+Ron Gula.
+\newblock Passive vulnerability detection.
+\newblock {\em Network Security Wizards}, 9:7, 1999.
+
+\bibitem{hoepman2008increased}
 Jaap-Henk Hoepman and Bart Jacobs.
-\newblock {Software Security Through Open Source}.
-\newblock 2004.
+\newblock Increased security through open source.
+\newblock {\em arXiv preprint arXiv:0801.3924}, 2008.
+
+\bibitem{mcwhirter2018sql}
+Paul~R McWhirter, Kashif Kifayat, Qi~Shi, and Bob Askwith.
+\newblock Sql injection attack classification through the feature extraction of
+  sql query strings using a gap-weighted string subsequence kernel.
+\newblock {\em Journal of information security and applications}, 40:199--216,
+  2018.
 
 \bibitem{Meneely:2009:SOS:1653662.1653717}
 Andrew Meneely and Laurie Williams.
@@ -17,10 +77,47 @@ Andrew Meneely and Laurie Williams.
   Communications Security}, CCS '09, pages 453--462, New York, NY, USA, 2009.
   ACM.
 
+\bibitem{merkel2014docker}
+Dirk Merkel.
+\newblock Docker: lightweight linux containers for consistent development and
+  deployment.
+\newblock {\em Linux journal}, 2014(239):2, 2014.
+
+\bibitem{mishra2002quality}
+Birendra Mishra, Ashutosh Prasad, and Srinivasan Raghunathan.
+\newblock Quality and profits under open source versus closed source.
+\newblock {\em ICIS 2002 Proceedings}, page~32, 2002.
+
 \bibitem{Orebaugh:2008:NEY:1571843}
 Angela Orebaugh and Becky Pinkard.
-\newblock {\em Nmap in the Enterprise: Your Guide to Network Scanning}.
+\newblock {\em {Nmap in the Enterprise: Your Guide to Network Scanning}}.
 \newblock Syngress Publishing, 2008.
+
+\bibitem{postel1985file}
+Jon Postel and Joyce Reynolds.
+\newblock File transfer protocol.
+\newblock 1985.
+
+\bibitem{10.5555/580808}
+Eric~S Raymond and Tim O'Reilly.
+\newblock {\em {The Cathedral and the Bazaar}}.
+\newblock O'Reilly {\&} Associates, Inc., USA, 1st edition, 1999.
+
+\bibitem{rogers2011nessus}
+Russ Rogers.
+\newblock {\em Nessus network auditing}.
+\newblock Elsevier, 2011.
+
+\bibitem{sakri2004intrusion}
+Sapiah Sakri.
+\newblock Intrusion detection and prevention.
+\newblock 2004.
+
+\bibitem{schryen2009open}
+Guido Schryen and Rouven Kadura.
+\newblock Open source vs. closed source software: towards measuring security.
+\newblock In {\em Proceedings of the 2009 ACM symposium on Applied Computing},
+  pages 2016--2023. ACM, 2009.
 
 \bibitem{Szor:2005:ACV:1050957}
 Peter Szor.
@@ -31,5 +128,10 @@ Peter Szor.
 B~Witten, C~Landwehr, and M~Caloyannides.
 \newblock {Does open source improve system security?}
 \newblock {\em IEEE Software}, 18(5):57--61, 2001.
+
+\bibitem{ylonen2006secure}
+Tatu Ylonen and Chris Lonvick.
+\newblock The secure shell (ssh) protocol architecture.
+\newblock 2006.
 
 \end{thebibliography}
