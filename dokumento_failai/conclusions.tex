@@ -1,1 +1,39 @@
-Išvados bei rekomendacijos.
+
+\paragraph{Rezultatai}
+
+Sukurtas saugus pažeidžiamumų skaitytuvas sistemų auditavimui naudojantis naujausiomis technologijos. Pažeidžiamumų skaitytuvas yra modulinis, turi tris modulius: Internetinę svetainę, duomenų bazę ir servisą, kuris atlieka visus skenavimus. Visos trys dalys geba veikti atskirai, taip pridedant papildoma saugumo ir stabilumo sluoksnį
+ 
+Pats skaitytuvas įgyvendina keturis skirtingus skenavimus skirtingiems pažeidžiamumams aptikti. Skaitytuvas geba aptikti išorinius pažeidžiamumus skenuodamas sistomos išorė, taip bandydamas aptikti atidarytus prievadus, sistemos operacinę sistema bei jos versiją, veikiančias kitas sistemas ju tipus ir versijas pagrindinėje sistemoje, tokias kaip: duomenų bazę, internetines svetaines. Taip pat yra bandoma aptikti kokiais protokolais galima prisijungti prie duomenų bazės, ir ištestuoti, ar galima prie jų jungtis anonimiškai. Skaitytuvas taip pat geba jungtis prie sistemos per FTP, prisijungus parsisiusti visus failus ęsančius joje ir tikrinti ar jie egzistuoja žinomų kenkėjiškų programų duomenų bazėje. Skaitytuvas gali ir tikrinti internetinę svetainę, kuri veikia pasirinktoje sistemoje, tikrinama ar ši svėtainė turi direktorijų kurios pateikia savo turinio sąraša, tokiose direktorijose failų turinį gali skaityti bet kas, taip randant neteisingai sudeliotas teises sistemoje. Taip pat ieškoma ir puslapių sąrašo, kuri neautentifikuotas vartotojas gali pasiekti, taip bandoma surasti puslapius, prie kurių vartotojas gali prieiti, taip bandoma surasti, ar yra prieigos taškų, kurie neturėtu būti prieinami kiekvienam. Taip pat yra tikrinama ir pati prieiga prie internetinės svėtainės, bandoma rasti ar nėra vykdoma MITM ataka ir ar internetinėje svetainėje neveikia kenkėjiškos programos. 
+
+Skaitytuvo saugumas yra užtikrinamas naudojant docker konteinerius. Parašyti specialius paruoštukai kiekvienam skenavimui kurie leidžia sukurti specifini konteineri kiekvienam skenavimui. Naudojant konteinerių technologija yra pasiekiamas saugumas, kuris apsaugo skaitytuvo sistemą nuo potencialių grėsmių kurios gali slėptis internetinėje svetainėje. Kiekvieno skenavimo užklausa vykdoma paraleliai paleižiant skenavimus, kas užtikrina didesnį greitį. Skenavimo rezultatai keliauja į duomenų bazę iš kurios vėliau yra paemami formuoti ataskaitą. Ataskaita yra specializuota kiekvienam testui.
+
+Internetinė svetainė veikia atskirai nuo visos likusios skaitytuvo struktūros ir yra skirta tik bendrauti su vartotoju. Svėtainėje yra autentifikacija, kuri reikalinga kuriant naujas skenavimo užklausas. Svetainėje galima kurti naujas skenavimo užklausas, peržiurėti visas kitas, ir parsisiusti jų visų ataskaitas. 
+
+\paragraph{Išvados}
+
+Kuo daugiau mūsų gyvenimai priklauso nuo skaitmeninių technologijų, tuo labiau visi yra priklausomi nuo kibernetinės saugos. Vienas iš geriausių būdų užtikrinti sistemos saugumą, yra jos auditavimas. Nuolatos atsiranda naujų grėsmių ir naujų pažeidžiamumų, kuriai naudodamiesi įsilaužėliai gali padaryti didžiulius nuostolius. Todėl ir pats pažeidžiamumų skaitytuvas turi būti nuolatos tobulinamas, tam kad pasivytų naujas grėsmes ir technologijas. Tokie skaitytuvai yra neatsiejami nuo sistemos saugumo auditavimo, dėl savo patogumo ir laiko taupymo. Pažeidžiamumų skaitytuvai kaip niekados ankščiau yra aktualus ir turintys didžiulę naudą. Norint pasiekti maksimalų sistemos sauguma, sistema tenka audituoti dažnai ir be automatizuotų skaitytuvu, toks darbas taptu ilgas, brangus ir reikalaujantis didelių laiko kaštų.
+
+Pažeidžiamumų skaitytuvas yra labai aktualus, bet jo kurimo procesas yra ilgas ir reikalaujantis labai didelio bagažo žinių. Taip pat jis turi būti nuolat tobulinamas, atnaujinamas. Kuo daugiau skenavimo metodų yra įgyvendinama, tuo daugiau potencialių pažeidimų jis gali aptikti. Bet problema tampa tai, kad kuo daugiau skenavimo metodų yra įgyvendinama, tuo daugiau atnaujinimų ir priežiuros jis reikalauja tam, kad tie skenavimo metodai nepasentu ir netaptu nebeaktualus. Taip pat, tam, kad galima būtų pridėti naujų skenavimo metodu, reikia nuolatos sekti kibernetinės saugos naujienas ir ieškoti naujų ir geresnių būtų kaip automatizuoti tokius skenavimus. Pats automatizavimas yra sunkus, nes daugelis potencialių pažeidžiamumų yra dinamiainiai ir jų radima automatizuoti kartais tampa neįmanoma. 
+
+\paragraph{Rekomendacijos}
+
+\begin{itemize}
+	\item Prieš kuriant isitikinti, ar jus turite pakankamą bagaža žinių skirtų kibernetiniai saugai;
+	\item Kurimas reikalauja didelio kiekio laiko, todėl tai daryti geriausia komandoje, kuri turėtų kibernetinio saugumo kompetencijos;
+	\item Įrankio palaikymas reikalauja domėjimosi naujausiomis kibernetinės saugos aktualijomis, tad daug skaityti su tuo susijusio turinio;
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

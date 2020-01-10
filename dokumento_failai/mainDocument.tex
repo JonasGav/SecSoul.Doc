@@ -31,8 +31,8 @@
 %keywords and notations if needed
 \sectionWithoutNumber{Sutartinis terminų žodynas}{FTP}{
 	\begin{itemize}
-		\item FTP - \textit{File Transfer protocol}, protokolas leidžiantis perkelti duomenis iš vienos sitemos į kitą\cite{postel1985file}.
-		\item MITM - \textit{Man in the middle}, Tai kibernetinės atakos tipas, kai puolėjas perima bendravima tarp serverio ir kliento\cite{callegati2009man}.
+		\item FTP - \textit{File trasnfer protocol} Failų perkelimo protokolas, protokolas leidžiantis perkelti duomenis iš vienos sitemos į kitą\cite{postel1985file}.
+		\item MITM - \textit{Man in the middle} - Žmogaus viduryje ataka, tai kibernetinės atakos tipas, kai puolėjas perima bendravima tarp serverio ir kliento\cite{callegati2009man}.
 		\item 	Buf{}fer overflow - tai viena iš potencialių rizikų, kai dėl per didelio kiekio duomenų, informacija yra perrašoma gretimuose atminties blokuose\cite{cowan1998stackguard}.
 		\item 	SSH - \textit{Secure Shell}, tai tinklo protokolas kuris leidžia vartotojui saugiai pasiekti sistemą per nesaugu tinklą \cite{ylonen2006secure}.
 		\item Framework - Tai karkasas, į kurį įeina kelios ar daugiau programinės įrangos ar kitų sistemų.
@@ -41,10 +41,10 @@
 		\item IPS - \textit{Intrusion prevention system}, tai \textit{IDS} papildymas, kuris gali aptikti įsilaužimą, ir ji sustabdyti\cite{sakri2004intrusion}.
 		\item HTTP - \textit{HyperText Transfer Protocol} tai informacijos priemimo perdavimo protokolas\cite{fielding1999hypertext}.
 		\item Daemon - Tai programa kuri veikia fone ir nėra valdoma vartotojo, bet laukia specifinio įvykio ar salygos suveikti.
-		\item Backdoor - Tai kodo dalis kuri leidžia atakuotojuj į sistemą patekti nepastebėtam.
-		\item Malware - Kenkimo programinė įranga, tai bendras pavadinimas tokiai programinei įrangai, kuri yra kenkėjiška ir patenka į sistema be vartotojo leidimo\cite{grewal2017hybrid}.
-		\item SQL injection - SQL injekcija. Tai vienas iš kibernetinės atakos tipų kai vartotojo įvestis internetinėje svėtainėje yra sumanipuliuojama taip, kad ji padarytu daugiau negu buvo planuota, paveikiant duomenų bazę ir joje įgyvendinant užklausą\cite{mcwhirter2018sql}.
-		\item Phishing - Fišingas, būdas skirtas pavogti privačia informacija apsimetant tam tikru tiekėju.
+		\item Slaptas įejimas - tai kodo dalis kuri leidžia atakuotojuj į sistemą patekti nepastebėtam.
+		\item Kenkėjiška programinė įranga - tai bendras pavadinimas tokiai programinei įrangai, kuri yra kenkėjiška ir patenka į sistema be vartotojo leidimo\cite{grewal2017hybrid}.
+		\item SQL injekcija - tai vienas iš kibernetinės atakos tipų kai vartotojo įvestis internetinėje svėtainėje yra sumanipuliuojama taip, kad ji padarytu daugiau negu buvo planuota, paveikiant duomenų bazę ir joje įgyvendinant užklausą\cite{mcwhirter2018sql}.
+		\item Fišingas - būdas skirtas pavogti privačia informacija apsimetant tam tikru tiekėju.
 	\end{itemize}
 }
 
@@ -64,6 +64,8 @@
 \newpage
 \section{Susijusių darbų analizė}
 \label{sec:motivation}
+
+Susijusių darbų analizėje yra analizuojami projektai, darbai, įrankiai, kurie vienaip ar kitaip skenuoja sistemas, ieško jose spragų. Analizės metu bandoma paaiškinti, kam šie darbai yra skirti, kokios yra jų stiprybės, kokio tipo pažeidžiamumus galima aptikti su šiais projektais, darbais ar įrankiais.
 
 \subsection{Nessus skaitytuvas}
 \label{sec:example}
@@ -90,7 +92,7 @@
 
 \subsubsection{Įrankio aprašymas}
 
-„OpenVAS“ yra visa apimantis pažeidžiamumų skaitytuvas. Jo galimybės apima įvairių aukšto ir žemo lygio interneto ir pramoninių protokolų skanavimą, našumo derinimą didelės apimties nuskaitymams ir galingą vidinę programavimo kalbą, kad būtų galima įgyvendinti bet kokio tipo pažeidžiamumo testą\cite{inproceedings}.
+„OpenVAS“ yra visa apimantis pažeidžiamumų skaitytuvas. Jo galimybės apima įvairių aukšto ir žemo lygio interneto ir pramoninių protokolų skanavimą, našumo derinimą didelės apimties nuskaitymams ir galingą vidinę programavimo kalbą, kuri leidžia įgyvendinti didelio skaičiaus pažeidžiamumų testus.\cite{inproceedings}.
 
 \subsubsection{Irankio ištakos}
 
@@ -114,8 +116,10 @@ Irankio skanavimo galimybes:
 \end{itemize}
 
 \newpage
-\section{Sistemų auditavimas}
-\label{sec:motivation}
+\section{Pažeidiamumų ir programinių klaidų analizės metodai}
+\label{sec:sec2}
+
+Programinės įrankos ar sistemų auditavimas apima platų spektrą metodikų, analizių. Sistemų auditavimas padeda surasti spragas prieš joms patenkant į galutinį produktą, ar produkto veikimo metu. Sistemu auditavimas taip pat padeda atrasti įsilaužimo paliktus pėdsakus - kenkėjiškų programų failus, ar paliktus potencialius slaptus įejimus. 
 
 \subsection{Statinė kodo analizė}
 \label{sec:example}
@@ -192,7 +196,10 @@ Metamorfiniai virusai neturi iššifruotojo ar nuolatinio viruso kūno, tačiau 
 
 \newpage
 \section{Gerosios praktikos}
-\label{sec:motivation}
+\label{sec:goodpractices}
+
+Gerųjų praktikų pritaikymas sitemoje ar projekte gali padėti atrasti ęsamus pažeidžiamumus, bei užtikrinti mažesnį skaičių busimų pažeidžiamumų. Gerosios praktikos turi būti taikomos ne vieną kartą, o pastoviai, kiekviename darbe, tik taip galima užtikrinti maksimalų gerųjų praktikų našumą sistemos saugume.
+
 \subsection{Atviro ir uždaro kodo programinė įranga}
 \label{sec:example}
 
@@ -204,7 +211,7 @@ Argumentai prieš atvirą kodą:
 \begin{itemize}
 	\item Atviras kodas suteikia didelį pranašumą atakuojančiui asmeniui dėl spragų radimo. Atakuojančiam asmeniui reikia surasti vieną spragą su kuria jis galėtu sekmingai užpulti sistemą, o programuotojams reikia ištaisyti visas spragas, kurios neleistu atakuojančiam asmeniui to padaryti\cite{brown2002opening}.
 	\item Yra didelis skirtumas tarp atviro dizaino ir atviro kodo. Atviras dizainas gali atskleisti logines klaidas kurios gali pakenkti sistemos saugumui. Bet skyrus pakankamai dėmesio ir peržiurėjus kodą pakankamai gerai, šios klaidos gali būti rastos ir ištaisytos, skirtingai negu atvirame kode kur klaidas aptikti yra ženkliai sunkiau \cite{hoepman2008increased}.
-	\item Atakuotojai gali apsimesti programuotojais kurie nori prisidėti prie atviro kodo sistemos kurimo ir palaikymo siulydami savo pataisymus kuriuose slepiasi \textit{backdoor} ar kitas klaidinantis kodas kuris iš pirmo žvilgsnio atlieka savo funkciją, bet įsigilinus pasimato, kad šie pataisymai yra skirti suteikti pranašumą puolėjuj\cite{951496}. 
+	\item Atakuotojai gali apsimesti programuotojais kurie nori prisidėti prie atviro kodo sistemos kurimo ir palaikymo siulydami savo pataisymus kuriuose slepiasi slapti įejimai ar kitas klaidinantis kodas kuris iš pirmo žvilgsnio atlieka savo funkciją, bet įsigilinus pasimato, kad šie pataisymai yra skirti suteikti pranašumą puolėjuj\cite{951496}. 
 	\item Kodo uždarymas užkerta kelią atakuojančiui asmeniui lengvai gauti informacijos apie sistemą ir jos spragas, priešingai negu laikant kodą atvira. Laikant kodą atvira atakuojantis asmuo gali labai lengvai rasti spragas, kurios jam padėtų įsilaužti į sistemą, arba jai pakenkti\cite{hoepman2008increased}. 
 	\item Viena iš didžiausių priežasčių kodėl atviras kodas nėra idealus pasirinkimas yra tai, kad kodo atvirumas negarantuoja, kad kodą peržiurės kvalifikuoti specialistai, kurie suteiks savo įžvalgas\cite{951496}. 
 	\item Atviro kodo projektai daug dažniau nustoja būti aktyvus negu uždaro kodo projektai dėl finansinių ar kitų priežasčių. Kadangi projektai būna neaktyvus ir nebepalaikomi, rastos klaidos nebėra taisomos, o sistemą kuri naudoja tokį produktą, turi didelią saugumo spagą\cite{951496}. 
@@ -231,13 +238,24 @@ Argumentas už uždaro kodo saugumą yra toks, kad uždaras kodas gali turėti s
 \label{sec:data}
 Saugesnė atvirojo kodo programinė įranga ar uždaro kodo programinė įranga? Galima teigti, kad dižiausias atviro kodo pliusas yra tai kad vartotojas gali peržiurėti programos kodą prieš ją naudodamas, skirtingai negu uždaro kodo programinė įranga, kuria vartotojas turi pasitikėti aklai\cite{Cowan:2003:SSO:858866.859050}. Atviro kodo programinė įranga tiek užpuolikams, tiek gynėjams suteikia didesnę galimybę imtis veiksmų, vienintelis klausimas, kas pirmas pastebės spraga, ir ką su ja darys\cite{mishra2002quality}. Uždaro kodo programinė įranga turiu pliusų žiurint iš komercinės prasmės, bet iš saugumo pusės - sakymas, kad saugumą užtikrina kodo slepimas, galima teigti, kad jis yra labai nepasitvirtines ir turint dabartines dekompiliavimo galimybės, nebegali teigti, kad tai yra tiesa \cite{hoepman2008increased}. Taigi, atsižvelgiant į visus argumentus ir pavyzdžius, galima teigti, kad saugumo prasme, geresnis pasirinkimas būtų rinktis atviro kodo produktus savo sistemai.
 
+\subsection{Sistemos auditavimas}
+
+Sistemos auditavimo metodikų yra didelis skaičius ir kuo daugiau jų yra taikoma, tuo daugiau naudos jie gali atnešti sistemos saugumui. Sistemų auditavimas susideda ne vien iš skenavimo ar analizės metodų, bet ir iš paprastų kasdienių konfiguravimo ar programavimo darbų.
+
+\subsubsection{Sistemos ir jos komponentų atnaujimas} 
+
+Vienas iš svarbesnių darbų kuriuos yra privaloma atlikti sistemoje norint užtikrinti sistemos saugumą - sistemos ir jos programanių komponentų atnaujimas. Dažnas atvėjis, kai senose operacinės sistemos, ar programinės įrangos versijose atrandama pažeidžiamumų, kuriais pasinaudojus įsilaužialiai gali patekti į sistemą. Problema kyla tada, kai vartotojai neatnaujina savo sistemose ęsančių operacinių sistemų ar programinės įrangos, sistemos tampa taikiniais, o kiekvienas įsilaužėlis turi raktą tiesiai į ją. Kaip pavyzdį galima pateikti aptiktą Microsoft Windows operacinėse sistemose buvusią spragą, vadinama „BlueKeep“. Šis pažeidžiamumas leisdavo bet kokiam puolėjuj patekti į sistemą kuri turi Microsoft Windows operacinės sistemos tam tikrą versiją naudojant RDP ir neturint jos prisijungimo duomenų\cite{CVE-2019-0708}. Problema buvo sutvarkyta, pažeidžiamumas ištaisytas naujesniuose operacinės sistemos atnaujinimuose. Iškylanti problema kuri egzistuoja dabar yra ta, kad skaičiuojama, kad milijonas sistemų iki dabar yra pažeidžiamos, dėl to, kad jos tiesiog nėra atnaujinamos\cite{sayan2019semantic}.
+
+\subsubsection{Pažeidžiamumų ir programinių klaidų analizės metodų taikymas}
+
+Pažeidžiamumų ir programinių klaidų analizės metodų taikymas padėtų rasti pažeidžiamumus internetinėse svėtainėse ar jų sistemose veikimo metu, ar svėtainės programavimo metu. Šie metodai yra aprašomi \ref{sec:sec2} skyriuje. Teisingai juos atliekant reguleriai, galima išvengti įvairių programavimo metu programos logikoje padarytų klaidų kurios potencialiai pasireikštų ne iš karto ir lauktų kaip tiksinčios laiko bombos. Statines ir dinamines kodo analizės atlieka dažnai atlieka programavimo aplinkos, kurios ispėja apie galimas būsimas problemas programavimo metu. Kitos analizės susijusios su kenkėjiškų programų radimu yra plačiai naudojamos populiariausių antivirusinių sistemų. Todėl gera praktika būtų turėti laiko patikrintą, geros reputacijos kenkėjiškų programų ieškojimo įrankį, arba dar kitaip - antivirusinę.
 
 \newpage
 \section{Sistemų auditavimo įrankis}
 \label{sec:motivation}
 
-\subsection{Įrankio aprašas}
-\label{sec:example}
+%\subsection{Įrankio aprašas}
+%\label{sec:example}
 
 Kurimo darbo metu buvo vadovaujamasi šiuo darbo tikslu: Sukurti saugų pažeidžiamumų skenavimo įrankį, kuris veiktu iš tam tikros slepiamos vietos, skenuotų internetinę
 svetainę bei jos failus, aptiktų pažeidžiamumus ar infekuotus failus, ir pateiktų klientui informaciją apie skenavimo rezultatus. Šis tikslas pasiektas tokiais veiksmais:
@@ -279,24 +297,98 @@ Duomenų bazė sukurta naudojant Microsoft SQL. Serviso sistemoje esanti serviso
 Aktyvumo diagramoje kuri yra \ref{fig:activity} pavyzdyje, galima matyti visus pasirinkimus kuris vartotojas turi. Vartotojo sąsaja sukurta naudojant Angular, visi atliekami veiksmai keliauja į API kuris sukurtas su ASP.NET Core. API vyksta visa internetinės svetainės logika - autentifikacijos valdymas, bei duomenų valdymas. Jungimosi metu į UI suvedami duomenys keliauja į API, kuriama prisijungimo duomenys yra verifikuojami su duomenų baze. Sekmingai prisijungus, vartotojas gali arba kurti naują skenavimo užklausą, arba pamatyti jau sukurtas. Kuriant skenavimo užklausa, duomenys taip pat yra tikrinami, patikrinus ir sekmingai užregistravus skenavimo užklausa, vartotojas gali eiti į skenavimų sąraša, kur bus pateikta jo sukurtiems skenavimas ataskaitų parsisiuntimo nuorodos, arba jis gali kurti vėl naują užklausą.
 
 \subsection{Saugios aplinkos užtikrinimas}
+\label{sec:safe}
 
-Internetinių svėtainių skenavimo įrankyje saugi aplinka užtikrinama naudojant Docker, kuris pasižymi tuo, kad su ja yra kuriami konteineriai, kurie yra izoliuoti nuo likusios sistemos. Pačia Docker technologiją galima lyginti su virtualiomis mašinomis kurias pavyzdžiui kuria VirtualBox įrankis. Skirtumas tarp jų vis dėl to yra didžiulis. Docker konteineriai yra kuriami operacinės sistemos lygyje skirtingai negu VirtualBox virtualios mašinos, taip pat kiekviena virtuali mašina turi turėti savo atskirą operacinę sistemą, o konteineriai tiesiog naudoja tapačia opericinę sitema kurioje jie yra kuriami, todėl konteineriai reikalauja žymiai mažiau išteklių, veikia žymiai greičiau, juos galima greitai kurti ir naikinti\cite{merkel2014docker}. Visa tai yra svarbu sistemai, nes kiekvienam procesui yra kuriamas atskirame konteineris, po kiekvieno proceso įgyvendinimo, konteineris yra sunaikinamas. Konteineriu greitis leidžia tai padaryti greitai ir saugiai, nėra priežasties kodėl konteinerius reiktų pernaudoti, nereikia surašinėti atskirai operacinių sistemų ir jas konfiguruoti, taip pat mažas resursu kiekis nestabdo visos sistemos bendrai, ir užtikrina, kad sistemą nesustos veikti.
-
-\subsection{Skenavimo užklausų įgyvendinimas NEPABAIGTA}
+Internetinių svėtainių skenavimo įrankyje saugi aplinka užtikrinama naudojant Docker, kuris pasižymi tuo, kad su ja yra kuriami konteineriai, kurie yra įzoliuoti nuo likusios sistemos. Pačia Docker technologiją galima lyginti su virtualiomis mašinomis kurias pavyzdžiui kuria VirtualBox įrankis. Skirtumas tarp jų vis dėl to yra didžiulis. Docker konteineriai yra kuriami operacinės sistemos lygyje skirtingai negu VirtualBox virtualios mašinos kurios kuriamos geležies lygyje, taip pat kiekviena virtuali mašina turi turėti savo atskirą operacinę sistemą, o konteineriai tiesiog naudoja tapačia opericinę sitema kurioje jie yra kuriami, todėl konteineriai reikalauja žymiai mažiau išteklių, veikia žymiai greičiau, juos galima greitai kurti ir naikinti\cite{merkel2014docker}. Visa tai yra svarbu sistemai, nes kiekvienam procesui yra kuriamas atskirame konteineris, po kiekvieno proceso įgyvendinimo, konteineris yra sunaikinamas. Konteineriu greitis leidžia tai padaryti greitai ir saugiai, nėra priežasties kodėl konteinerius reiktų pernaudoti, nereikia surašinėti atskirai operacinių sistemų ir jas konfiguruoti, taip pat mažas resursu kiekis nestabdo visos sistemos bendrai, ir užtikrina, kad sistemą nesustos veikti.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{figs/Full.png}
-	\caption{Įrankio pilna veikimo schema}
+	\includegraphics[width=1\textwidth]{figs/docker.png}
+	\caption{Saugios aplinkos užtikrinimo veikimas}
+	\label{fig:docker}
+\end{figure}
+
+Pilnoje saugios aplinkos įgyvendinimo schemoje kuri yra \ref{fig:docker} pavyzdyje, matome visą procesą, kuris užtikrina sistemos ir įrankio saugumą. Kiekvieno žingsnio kuris yra įgyvendinamas paaiškinimas:
+\begin{enumerate}
+	\item Iš pradžių servisas paleidžia „launch.sh“ bash skriptą, tuo pačiu skriptui perduodamas parametrus reikalingus skenavimui įgyvendinti. Servisas viso šio skripto metu laukia, kol skriptas pabaigs savo darbą.
+	
+	\item Skriptas „launch.sh“ sukuria konteinerį pagal pasirinktą docker vaizdą. Kiekvienas atliekamas skenavimas turi savo specifinį vaizdą kurie yra sukuriami vieną karta, ir visa laika laikomi išsaugoti.
+	Kurdamas konteineri skriptas taip pat į konteinerį perduoda bash komandą, kuri paleidžia „entry.sh“ skriptą ęsanti konteineryje ir paleidimo metu perduoda jam parametrus, kuriuos pats gavo iš serviso. Skriptas konteineryje atsiranda kartu su jo sukurimu, nes šis skriptas taip pat saugomas vaizde. Skriptas „launch.sh“ paleides skriptą „entry.sh“ laukia, kol jis baigs savo darbą.
+	
+	\item Skriptas „entry.sh“ įgyvendina skenavimo komandas su gautais parametrais iš „launch.sh“ skripto. Jeigu skenavimo metu tenka parsisiusti failų iš skenuojamos sistemos, šis skriptas taip pat juos parsiunčia ir patalpina į konteinerį. 
+	
+	\item Skriptas „entry.sh“ įgyvendines skenavimo komandas, sukuria rezultatų failą, į kurį įdeda rezultatus, prireikus juos suformatuoja tam tikra tvarka prieš įdėdamas. Tuomet jis baigia savo darbą.
+	
+	\item Skriptas „launch.sh“ sulaukes skripto „entry.sh“ pabaigos, kopijuoja rezultatų failą ęsantį konteineryje.
+	
+	\item Tuomet skriptas „launch.sh“ sukuria failą pagrindinėje sistemoje ir įkelia į jį nukopijuotus duomenis.
+	
+	\item Skriptas „launch.sh“ sunaikina konteineri su visais jame esančiai failais ir baigia savo darbą. Jeigu konteineryje buvo atsiusta failu iš skenuojamos sistemos, jie taip pat yra sunaikinami.
+	
+	\item Servisas sulaukia skripto „launch.sh“ pabaigos ir toliau vykdo savo darbą, pasiema rezultatus iš rezultatų failo ir juos naudoja tolimesniuose procesuose.
+\end{enumerate} 
+
+\subsection{Igyvendinami skenavimo metodai}
+
+Iš viso yra įgyvendinti keturi skenavimo metodai. Šie metodai apriebia didelį skaičių potencialių pažeidžiamumų, taip pat su šiais metodais galima aptikti dažniausiai esančius pažeidžiamumus, kurie pasitaiko sistemose. Metodai apima atvejus ne vien tik situacijas kai esantis pažeidžiamumai yra aptinkami prieš įsilaužima, bet įsilaužimo ir po isilaužimo situacijas.
+
+\subsubsection{Išorinis sistemos skenavimas}
+\label{sec:scanOutside}
+Išorinis sistemos skenavimas skirtas tam, kad aptiktų atvirus prievadus, patikrinti, kokią informacija išduota pati sistema - kokią operacinę sistemą pati sistema naudoja, kokia tos operacinės sistemos versija, kokios aplikacijos ar sistemos veikia toje sistemoje, ar prie šių sistemų galima jungtis, ar gali prisijungti anoniminei vartotojai. Skenavimo įgyvendinimo metu yra sukuriamas konteineris, iš kurio yra atliekamas skenavimas. Skenavimui pasibaigus yra surenkami rezultatai ir atiduodami servisui, konteineris yra saugiai sunaikinamas, o rezultatai patalpinami į duomenų bazę.
+\subsubsection{Failų skenavimas}
+\label{sec:scanFile}
+Internetinės sistemos failų skevimas skirtas tam, kad patikrinti ar į sistemą jau nebuvo isilaužta, ir joje nėra paliktu kenkėjiškų programų. Šis skenavimas yra įgyvendinimas skenavimo užklausos metu. Sukuriamas Docker konteineris, iš kurio naudojant \textit{FTP} prisijungiama prie sistemos. Iš \textit{FTP} direktorijos yra parsiunčiami visi failai į konteineri, tuomet yra generuojami visų failų MD5 maišos žodžiai, kurie yra paruošiami tikrinimui ir yra patikrinami žinomų kenkėjiškų programų failų MD5 maišos žodžių duomenų bazėje. Tuomet rezultatai yra gražinami į servisą, o pats konteineris yra saugiai sunaikinamas. Rezultatai patalpinami į duomenų bazę.
+\subsubsection{Internetinės svėtainės prieigos skenavimas}
+\label{sec:scanUrl}
+Internetinės svėtainės prieigos skenavimas yra skirtas tam kad aptiktų potencialias \textit{MITM} atakas, fišingo svėtaines, kenkėjiškų programų svėtaines. Veikimas yra toks, kad svetainės adresas yra nusiunčiamas trečiajai šaliai, kuri svetainės adresą skenuoja su įvairiomis antivirusinėmis. Tuomet yra pateikiama detali ataskaita. Kadangi šio skenavimo metu nera kontaktuojama su pačia svetaine tiesiogiai, Docker konteineriai nėra kuriami.
+\subsubsection{Internetinės svėtainės enumeravimas}
+\label{sec:scanEnum}
+Internetinės svėtainės enumeravimas yra skirtas tam, kad aptiktu potencialias internetinės svėtainės spragas tokias kaip atviras direktorijas, kuriose puolėjas gali be jokių kliučių perskaityti jose ęsančių failų turinį. Taip pat aptinkama visi internetinės svetainės puslapiai, prie kurių vartotojas gali prieiti be jokios autentifikacijos, sakykime prie administratoriaus puslapio, šios problemos kyla dėl blogai sukonfiguruotų teisių ar pačio puslapio autentifikacijos. Skenavimo metu yra sukuriamas konteineris, kuriame vykdomas enumeravimas, konteineryje susigeneruoja rezultatų failas, kuris yra gražinamas servisui, o pats konteineris yra saugiai sunaikinamas. Rezultatai yra patalpinami į duomenų bazę.
+
+\subsection{Skenavimo užklausų įgyvendinimas}
+\label{sec:allProc}
+
+Skenavimo užklausų įgyvendinimas yra svarbiausias procesas šiame įrankyje. Skyriuje \ref{sec:allProc} bus paaiškinama visas skenavimo užklausos įgyvendinimas nuo jos sukurimo iki skenavimo užklausos ataskaitos parsisiuntimo.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{figs/Fulllt.png}
+	\caption{Įrankio veikimo schema}
 	\label{fig:full}
 \end{figure}
+
+Įrankio veikimo schemoje kuri yra \ref{fig:full} pavyzdyje galima matyti daug procesu kurie veikia paeiliui arba parareliai. Kiekvieno proceso paaiškinamas paeiliui:
+
+\begin{enumerate}
+	
+	\item Prisijunges vartotojas kurdamas skenavimo užklausą suvedada atitinkamus parametrus tokius kaip: Internetinės svėtainės adresą, FTP atrasą, FTP prisijungimo duomenis;
+	
+	\item Duomenys yra siunčiami į WebApi, kuriame vyksta visa duomenų verifikavimo logika, tikrinama ar duomenis yra geri, ar adresai yra teisingai suvesti;
+	
+	\item Verifikuoti duomenys yra siunčiami į duomenų baze, ir yra išsaugomi;
+	
+	\item Servise veikia laikmatis, kuris praejus tam tikrai laikui vis tikra ar duomenų bazėje nėra skenavimo užklausų, kurios dar nebuvo įgyvendintos. Jei tokių užklausų yra, duomenys yra paiemami;
+	
+	\item  Pradedama vykdyti skenavimo logika kiekvienai užklaisai paeiliui. Užklausos vykdomos paeiliui, o ne iš karto visos tam, kad užtikrinti sistemos stabilumą ir minimalų resursų naudojimą. Jeigu vienu būtu įgyvendinamos šimtai užklausų, rizikuojama, kad sistema pritruks resursų visoms operacijoms įgyvendinti. Nors ir kiekviena užklausa įgyvendinama paeiliui, bet kiekvienai kiekvienai užklaisai skenavimo operacijos yra vykdomomos parareliai. Šiuo atveju nėra rizikuojama, kad sistema pritruks resursų, todėl, kad vykdomas fiksuotas skaičius operacijų;
+	
+	\item Baigusis operacijoms rezultatai yra formatuojami ir įdedami į duomenų bazę.
+	
+	\item Tuo tarpu WebApi vykdo užklausas į duomenų bazę ar dar nėra skenavimo užklausos duomenų kiekvieną karta, kai vartotojas perkrauna puslapį, kuriame yra skenavimo užklausų sąrašas, gavus atsaka, kad duomenų yra, vartotojuj leidžiama atsisiūsti ataskaitą;
+	
+	\item Vartotojas duoda užklausą gauti skenavimo užklausos ataskaitą. Tuo metu pasiemami duomenys iš duomenų bazės ir yra generuojama ataskaitą HTML formatu. Sugeneruojamas parsisiuntimo adresas.
+	
+	\item Vartotojuj leidžiama parsisiusti ataskaitą.
+	
+\end{enumerate}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{figs/1Containerlt.png}
-	\caption{Konteinerių sukurimas}
+	\caption{Konteinerių sukurimas įgyvendinant skenavimo užklausas}
 	\label{fig:1Container}
 \end{figure}
+
+Serviso sistemoj įgyvendinant skenavimo užklausas yra kuriami trys docker konteineriai kaip pavaizduota \ref{fig:1Container} pavizdyje. Apie patį konteinerių kurimo procesa buvo rašyta \ref{sec:safe} skyriuje. Kiekvieno konteinerio procesas reikalauja skirtingų parametrų, nes atlieka skirtingus darbus. Jie gaunami \ref{fig:full} pavyzdžio pirmajame punkte.
 
 \begin{figure}[H]
 	\centering
@@ -305,6 +397,8 @@ Internetinių svėtainių skenavimo įrankyje saugi aplinka užtikrinama naudoja
 	\label{fig:2Container}
 \end{figure}
 
+Proceso veikimas pavaizduotas \ref{fig:2Container} pavizdyje, ir jame matome, kad visi konteineriai atlieka skirtingus procesus paraleliškai, pirmasis konteineris atlieka skenuojamos sistemos išorinę analizę apie kurią daugiau buvo rašyta \ref{sec:scanOutside} skyriuje, šiam konteineriui kaip parametras yra paduodamas sistemos IP adresas. Antrasis konteineris atlieka skenuojamos internetinės svėtainės enumeraciją, kuri aprašyta \ref{sec:scanEnum}, šiam konteineriui kaip parametras yra paduodamas internetinės svėtainės adresas. Trečiasis konteineris jungiasi į prie serverio naudodamas FTP protokolą ir atlieka failų skenavimą, kuris aprašytas \ref{sec:scanFile} skyriuje, šiam konteineriui per parametrus yra paduodi FTP prisijungimo duomenys, bei FTP adresas. Taip pat yra įgyvendinamas ir internetinės prieigos skenavimas kuris aprašytas \ref{sec:scanUrl} skyriuje, tačiau šiam skenavimui nereikalinga prieiga skenuojamos sistemos, todėl konteineris jam nėra kuriamas.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{figs/3Containerlt.png}
@@ -312,18 +406,8 @@ Internetinių svėtainių skenavimo įrankyje saugi aplinka užtikrinama naudoja
 	\label{fig:3Container}
 \end{figure}
 
-\subsubsection{Igyvendinami skenavimo metodai}
+Įgyvendinus visus skenavimo procesus, rezultatai yra gražinami pačiam servisui, o patys konteineriai susinaikina. Taip pat internetinės svėtainės prieigos skenavimo rezultatai yra pasiemami, ir perduodami servisui, servisas vėliau juos formatuoja ir talpina į duomenų bazę. Pats duomenų perdavimas ir konteineriu sunaikinimas yra aprašytas \ref{sec:safe} skyriuje.
 
-
-
-\paragraph{Išorinis sistemos skenavimas}
-Išorinis sistemos skenavimas skirtas tam, kad aptiktų atvirus prievadus, patikrinti, kokią informacija išduota pati sistema - kokią operacinę sistemą pati sistema naudoja, kokia tos operacinės sistemos versija, kokios aplikacijos ar sistemos veikia toje sistemoje, ar prie šių sistemų galima jungtis, ar gali prisijungti anoniminei vartotojai. Skenavimo įgyvendinimo metu yra sukuriamas konteineris, iš kurio yra atliekamas skenavimas. Skenavimui pasibaigus yra surenkami rezultatai ir atiduodami servisui, konteineris yra saugiai sunaikinamas, o rezultatai patalpinami į duomenų bazę.
-\paragraph{Failų skenavimas}
-Internetinės sistemos failų skevimas skirtas tam, kad patikrinti ar į sistemą jau nebuvo isilaužta, ir joje nėra paliktu \textit{malware}. Šis skenavimas yra įgyvendinimas skenavimo užklausos metu. Sukuriamas Docker konteineris, iš kurio naudojant \textit{FTP} prisijungiama prie sistemos. Iš \textit{FTP} direktorijos yra parsiunčiami visi failai į konteineri, tuomet yra generuojami visų failų MD5 maišos žodžiai, kurie yra paruošiami tikrinimui ir yra patikrinami žinomų \textit{malware} failų MD5 maišos žodžių duomenų bazėje. Tuomet rezultatai yra gražinami į servisą, o pats konteineris yra saugiai sunaikinamas. Rezultatai patalpinami į duomenų bazę.
-\paragraph{Internetinės svėtainės prieigos skenavimas}
-Internetinės svėtainės prieigos skenavimas yra skirtas tam kad aptiktų potencialias \textit{MITM} atakas, \textit{Phishing} svėtaines, \textit{malware} svėtaines. Veikimas yra toks, kad svetainės adresas yra nusiunčiamas trečiajai šaliai, kuri svetainės adresą skenuoja su įvairiomis antivirusinėmis. Tuomet yra pateikiama detali ataskaita. Kadangi šio skenavimo metu nera kontaktuojama su pačia svetaine tiesiogiai, Docker konteineriai nėra kuriami.
-\paragraph{Internetinės svėtainės enumeravimas}
-Internetinės svėtainės enumeravimas yra skirtas tam, kad aptiktu potencialias internetinės svėtainės spragas tokias kaip atviras direktorijas, kuriose puolėjas gali be jokių kliučių perskaityti jose ęsančių failų turinį. Taip pat aptinkama visi internetinės svetainės puslapiai, prie kurių vartotojas gali prieiti be jokios autentifikacijos, sakykime prie administratoriaus puslapio, šios problemos kyla dėl blogai sukonfiguruotų teisių ar pačio puslapio autentifikacijos. Skenavimo metu yra sukuriamas konteineris, kuriame vykdomas enumeravimas, konteineryje susigeneruoja rezultatų failas, kuris yra gražinamas servisui, o pats konteineris yra saugiai sunaikinamas. Rezultatai yra patalpinami į duomenų bazę.
 
 \subsection{Įrankio Skenavimo metodų platforma}
 
@@ -355,16 +439,17 @@ Internetinės svėtainės enumeravimas yra skirtas tam, kad aptiktu potencialias
 Šiuo metu skenavimo įrankis gali aptikti šiuo pažeidžiamumus:
 \begin{itemize}
 	\item Aptiktinos yra \textit{MITM} atakos tikrinant internetinės svetainės atsakus;
+	\item Aptinkama ar puslapis yra nesaugus naudoti ir turi kenkėjiškų programų;
 	\item Aptiktinos direktorijos, kurios sąrašo pavidalu gražina savo turinį, taip atsitinka dėl neteisingai sudėtų teisių sistemoje, dėl šio pažeidžiamumo puolėjas atrades šia direktoriją gali be jokių kliučių peržiurėti joje esančius failus;
 	\item Aptiktini puslapiai, prie kurių neprisijunges vartotojas neturėtu galimybės prieiti. Kaip pavyzdį galima būtų pateikti prisijungimo vietas prie administratoriaus sąsajos;
-	\item Aptiktinkami \textit{Malware} ir infekuoti failai;
+	\item Aptiktinkamos kenkėjiškos programos ir infekuoti failai;
 	\item Aptinkamos sistemos, kurios veikia skenuojamoje sistemoje;
 	\item Aptinkami atidaryti prievadai.
 \end{itemize}
 
-\subsection{Įgyvendinti tikslai}
+\subsection{Įgyvendinti uždaviniai}
 \label{sec:example}
-Įgyvendinti šie apsibrėžti tikslai: 
+Įgyvendinti šie apsibrėžti uždaviniai: 
 \begin{itemize}
 	\item Sukurta svėtainė, kuri leidžia vartotojuj kurti skenavimo užklausas, ir po jų sukurimo, leidžia atsisiusti suformatuotus rezultatus;
 	\item Sukurta platforma ir paruoštukai, kurie leidžia lengvai pridėti naujus skenavimo metodus į įrankį;
@@ -377,11 +462,11 @@ Internetinės svėtainės enumeravimas yra skirtas tam, kad aptiktu potencialias
 \subsection{Trūkumai}
 \label{sec:example}
 
-Įrankio kurimo metu buvo susidurta su daug problemų ir sunkumų, kurių pasekoje kaikurie planuoti tikslai nebuvo įgendinti. Pats įrankio kurimo procesas yra ypac sudetingas dėl didelio skaičiaus skirtingų technologijų, su kuriomis yra kuriamos internetinės svėtainės, taip pat kiekviena internetinė svetainė skiriasi nuo kitų savo sistemos komponentais, architektūra, naudojamomis technologijomis.
+Įrankio kurimo procesas yra ypac sudetingas dėl didelio skaičiaus skirtingų technologijų, su kuriomis yra kuriamos internetinės svėtainės, taip pat kiekviena internetinė svetainė skiriasi nuo kitų savo sistemos komponentais, architektūra, naudojamomis technologijomis.
 
-Kurimo metu buvo planuota panaudoti trečios šalies įranki SqlMap. Šio įrankio paskirtis yra ieškoti ar internetinė svetainė yra pažeidžiama \textit{SQL injection} atakoms. Tokio tipo skenavimui reikėtų sukurti internetinės svėtaines puslapių kodo funkciją, kuri svetainės puslapyje iėško dinaminių nuorodų. Šios nuorodos priema parametrus savo nuorodose. Tuomet SqlMap įrankis bando į šiuos parametrus įdeti manipuliuotą tekstą kuris įvykdytų užklausą duomenų bazeje. Šio įrankio funkcionalumo įgyvendinimas šioje skenavimo sistemoje tapo perdaug problematiškas ir laiko užimantis dėl pačios funkcijos kuri ieškotų tokių įveščių internetinėje svėtainėje. Dėl šios priežasties SqlMap funkcionalumo tekta atsisakyti.
+Kurimo metu buvo planuota panaudoti trečios šalies įranki SqlMap. Šio įrankio paskirtis yra ieškoti ar internetinė svetainė yra pažeidžiama SQL injekcijos atakoms. Tokio tipo skenavimui reikėtų sukurti internetinės svėtaines puslapių kodo funkciją, kuri svetainės puslapyje iėško dinaminių nuorodų. Šios nuorodos priema parametrus savo nuorodose. Tuomet SqlMap įrankis bando į šiuos parametrus įdeti manipuliuotą tekstą kuris įvykdytų užklausą duomenų bazeje. Šio įrankio funkcionalumo įgyvendinimas šioje skenavimo sistemoje tapo perdaug problematiškas ir laiko užimantis dėl pačios funkcijos kuri ieškotų tokių įveščių internetinėje svėtainėje. Dėl šios priežasties SqlMap funkcionalumo tekta atsisakyti.
 
-Kurimo metu taip pat buvo užsibrežta įgyvendinti statinė analizę. Šis tikslas buvo įgyvendintas nepilnai, patys failai yra tikrinami žinomų \textit{Malware} duomenų bazėje, bet internetinės svėtainės kodas nėra tikrinamas. Šio tikslo tekta atsisakyti ir perkelti statinės analizės technikų įgyvendinimus į ateities darbus. Šio atsisakymo priežastis yra ta, kad kiekvienai programavimo kalbai reikalingas atskiras statinės analizės įgyvendinimas, kieviena kalba yra kitokia ir jos funkcionalumas ir sintaksė yra kitokia, dėl šios priežasties tokio funkcionalumo kurimo kaštai stipriai didėja.
+Kurimo metu taip pat buvo užsibrežta įgyvendinti statinė analizę. Šis tikslas buvo įgyvendintas nepilnai, patys failai yra tikrinami žinomų kenkėjiškų programų duomenų bazėje, bet internetinės svėtainės kodas nėra tikrinamas. Šio tikslo tekta atsisakyti ir perkelti statinės analizės technikų įgyvendinimus į ateities darbus. Šio atsisakymo priežastis yra ta, kad kiekvienai programavimo kalbai reikalingas atskiras statinės analizės įgyvendinimas, kieviena kalba yra kitokia ir jos funkcionalumas ir sintaksė yra kitokia, dėl šios priežasties tokio funkcionalumo kurimo kaštai stipriai didėja.
 
 
  %Conclusions section
@@ -389,26 +474,16 @@ Kurimo metu taip pat buvo užsibrežta įgyvendinti statinė analizę. Šis tiks
 \input{conclusions.tex}
 
 %ateities darbų gairės, planas/next steps of the work
-\sectionWithoutNumber{Ateities tyrimų planas}{future}{Pristatomi ateities darbai ir/ar jų planas, gairės tolimesniems darbams....}
+\sectionWithoutNumber{Ateities darbų planas}{future}
 
-\subsection{Statinė kodo analizė NESKAITYTI}
+Ateities darbų plano gairės:
 
-\subsubsection{Panaudojimas darbe}
-\label{sec:data}
-Vartotojui davus \textit{FTP} serverio adresą iš jo bus bandoma atsisiūsti išeities kodą. Atsisiuntus sistemos išeities kodą bus atliekama statinė analizė ir taip bus bandoma aptikti spragas ar scenarijus, kurie kelią potencialią grėsmę pačiai sistemai. Tokios grėsmės būtų - įsilaužimas, arba sistemos veikimo paveikimas, sugadinimas. 
+\begin{itemize}
+	\item Įgyvendinti statinę analizę, parsisiuntus internetinės svetainės kodą, jį analizuoti priklausomai nuo kokia kalba jis parašytas;
+	\item Įgyvendinti svėtainės dinaminę analizę, parsisiuntus internetinę svetainę, automatizuoti jos paleidimą ir paleidus įgyvendinti dinaminę analizę.
+	\item Vidinių pažeidžiamumų skenavimą, prisijungti prie sistemos naudojans SSH, paleisti scriptus, kurie randa sistemos spragas.
+\end{itemize}
 
-\subsubsection{Dinaminė kodo analizė}
-
-\subsubsection{Panaudojimas darbe}
-\label{sec:data}
-Dinaminė analizė bus taikoma spragų skenavimo sistemoje su kliento sutikimu. Analizės metu, bus bandoma į visas sistemos įvestis pateikti nenumatytu reikšmių, taip išbandant kuo daugiau nenumatytų scenarijų.
-
-
-\subsubsection{Vidinių pažeidžiamumų skenavimas}
-
-\subsubsection{Panaudojimas darbe}
-\label{sec:data}
-Įrankio vartotojas savo noru gali pateikti prisijungimus prie sistemos naudojant \textit{SSH} protokolą. Pasinaudojus šia informaciją įrankis prisijungs prie sistemos, ir naudodamas vidinės analizės komponentą, bandys surinkti kuo daugiau informacijos. Surinkus visą galimą informaciją, bus ieškomos potencialios spragos.
 
  %file References.bib
 \referenceSources{References}

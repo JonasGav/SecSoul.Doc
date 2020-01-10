@@ -1,10 +1,11 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: mainDocument.aux
 The style file: plain.bst
 Database file #1: References.bib
+Warning--to sort, need author or key in CVE-2019-0708
 Warning--empty booktitle in inproceedings
 Warning--empty journal in brown2002opening
 Warning--empty journal in grewal2017hybrid
 Warning--empty journal in postel1985file
 Warning--empty journal in sakri2004intrusion
 Warning--empty journal in ylonen2006secure
-(There were 6 warnings)
+(There were 7 warnings)

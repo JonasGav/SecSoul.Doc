@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{CVE-2019-0708}
+{CVE}-2019-0708.
+\newblock Available from MITRE, {CVE-ID} {CVE}-2019-0708., 2019.
+
 \bibitem{inproceedings}
 Muharrem Aksu, Enes Altuncu, and Kemal Bicakci.
 \newblock A first look at the usability of openvas vulnerability scanner.
@@ -112,6 +116,13 @@ Russ Rogers.
 Sapiah Sakri.
 \newblock Intrusion detection and prevention.
 \newblock 2004.
+
+\bibitem{sayan2019semantic}
+Carla Sayan, Salim Hariri, and George~L Ball.
+\newblock Semantic knowledge architecture for cyber security.
+\newblock In {\em Proceedings of the International Conference on Security and
+  Management (SAM)}, pages 69--76. The Steering Committee of The World Congress
+  in Computer Science, Computer~…, 2019.
 
 \bibitem{schryen2009open}
 Guido Schryen and Rouven Kadura.
