@@ -31,7 +31,7 @@
 %keywords and notations if needed
 \sectionWithoutNumber{Sutartinis terminų žodynas}{FTP}{
 	\begin{itemize}
-		\item FTP - \textit{File trasnfer protocol} Failų perkėlimo protokolas, protokolas leidžiantis perkelti duomenis iš vienos sitemos į kitą\cite{postel1985file}.
+		\item FTP - \textit{File trasnfer protocol} - Failų perkėlimo protokolas, protokolas leidžiantis perkelti duomenis iš vienos sitemos į kitą\cite{postel1985file}.
 		\item MITM - \textit{Man in the middle} - „Žmogaus viduryje“ ataka – kibernetinės atakos tipas, kai puolėjas perima bendravimą tarp serverio ir kliento\cite{callegati2009man}.
 		\item 	Buf{}fer overflow – viena iš potencialių rizikų, kai dėl per didelio kiekio duomenų informacija yra perrašoma gretimuose atminties blokuose\cite{cowan1998stackguard}.
 		\item 	SSH - \textit{Secure Shell} – tinklo protokolas, kuris leidžia vartotojui saugiai pasiekti sistemą per nesaugų tinklą \cite{ylonen2006secure}.
@@ -70,7 +70,7 @@ Susijusių darbų analizėje yra analizuojami projektai, darbai, įrankiai, kuri
 \subsection{Nessus skaitytuvas}
 \label{sec:example}
 
-„Nessus“ įrankis yra tinklo pažeidžiamumų skaitytuvas, kuris naudoja bendrąją pažeidžiamumų architektūrą, kad lengvai susietų suderinamus kibernetinio saugumo įrankius. „Nessus“ naudoja \textit{NASL}\cite{rogers2011nessus}. 
+„Nessus“ įrankis yra tinklo pažeidžiamumų skaitytuvas, kurio architektūra leidžia lengvai susietų suderinamus kibernetinio saugumo įrankius\cite{rogers2011nessus}. „Nessus“ naudoja \textit{NASL}. 
 
 „Nessus“ turi modulinę architektūrą, susidedančią iš serverio \textit{daemon} atliekančio nuskaitymą ir nuotolinio kliento, kuris yra valdomas administratoriaus. Administratoriai gali įtraukti \textit{NASL} visų įtariamų pažeidžiamumų aprašus, kad sukurtų tinkintus nuskaitymus. Reikšmingos „Nessus“ galimybės:
 
@@ -92,7 +92,7 @@ Susijusių darbų analizėje yra analizuojami projektai, darbai, įrankiai, kuri
 
 \subsubsection{Įrankio aprašymas}
 
-„OpenVAS“ yra visa apimantis pažeidžiamumų skaitytuvas. Jo galimybės apima įvairaus (aukšto ir žemo) lygio interneto ir pramoninių protokolų skanavimą, našumo derinimą didelės apimties nuskaitymams ir galingą vidinę programavimo kalbą, kuri leidžia įgyvendinti didelio skaičiaus pažeidžiamumų testus.\cite{inproceedings}.
+„OpenVAS“ yra visa apimantis pažeidžiamumų skaitytuvas. Jo galimybės apima įvairaus (aukšto ir žemo) lygio interneto ir pramoninių protokolų skenavimą, našumo derinimą didelės apimties nuskaitymams ir galingą vidinę programavimo kalbą, kuri leidžia įgyvendinti didelio skaičiaus pažeidžiamumų testus.\cite{inproceedings}.
 
 \subsubsection{Irankio ištakos}
 
@@ -105,7 +105,7 @@ Dėl šios priežasties abu įrankiai yra panašūs. Didžiausias jų skirtumas 
 \subsection{Nmap}
 \label{sec:nmap}
 
-„Nmap“ („Network Mapper“) yra nemokamas ir atvirojo kodo įrankis, kuris yra skirtas tinklo skanavimui. Daugelis sistemų ir tinklo administratorių mano, kad šis įrankis naudingas atliekant tokias užduotis kaip tinklo inventorizavimas ir  pagrindinio kompiuterio ar paslaugos veikimo stebėjimas. „Nmap“ naudoja neapdorotus IP paketus, kurie padeda įrankiui būti daug efektyviasniam. Įrankis buvo sukurtas greitai nuskaityti didelius tinklus, tačiau puikiai veikia su atskirais kompiuteriais ar serveriais. „Nmap“ veikia visose pagrindinėse kompiuterių operacinėse sistemose  „Linux“, „Windows“ ir „Mac OS X“\cite{Orebaugh:2008:NEY:1571843}. 
+„Nmap“ („Network Mapper“) yra nemokamas ir atvirojo kodo įrankis, kuris yra skirtas tinklo skenavimui. Daugelis sistemų ir tinklo administratorių mano, kad šis įrankis naudingas atliekant tokias užduotis kaip tinklo inventorizavimas ir  pagrindinio kompiuterio ar paslaugos veikimo stebėjimas. „Nmap“ naudoja neapdorotus IP paketus, kurie padeda įrankiui būti daug efektyviasniam. Įrankis buvo sukurtas greitai nuskaityti didelius tinklus, tačiau puikiai veikia su atskirais kompiuteriais ar serveriais. „Nmap“ veikia visose pagrindinėse kompiuterių operacinėse sistemose  „Linux“, „Windows“ ir „Mac OS X“\cite{Orebaugh:2008:NEY:1571843}. 
 
 Įrankio skenavimo galimybės:
 \begin{itemize}
@@ -125,7 +125,7 @@ Programinės įrangos ar sistemų auditavimas apima platų spektrą metodikų, a
 \label{sec:example}
 
 \label{sec:data}
-Statinė analizė suteikia galimybę gauti informaciją apie galimą programos elgesį programos vykdymo metu arba nevykdant programos. Statinė analizė tiria išeities kodą ir ieško įtartinų kodo segmentų, kurie galėtų turėti spragą. Teisingai atlikus statinę analizę galima aptikti akivaizdžias klaidas, kurių programuotojas galėjo nepastebėti, tai sutaupo laiko bei sumažina spragų kiekį. Taip pat aptinkami nenumatyti scenarijai\cite{Cowan:2003:SSO:858866.859050}. Kai kurios programavimo aplinkos (Visual Studio, IntelliJ...) atlieka pastovią statinę analizę tam, kad programuotojai pamatytų potencialias klaidas prieš sistemos startą. 
+Statinė analizė suteikia galimybę gauti informaciją apie galimą programos elgesį programos vykdymo metu arba nevykdant programos. Statinė analizė tiria išeities kodą ir ieško įtartinų kodo segmentų, kurie galėtų turėti spragą. Teisingai atlikus statinę analizę galima aptikti akivaizdžias klaidas, kurių programuotojas galėjo nepastebėti, tai sutaupo laiko bei sumažina spragų kiekį\cite{Cowan:2003:SSO:858866.859050}. Taip pat aptinkami nenumatyti scenarijai. Kai kurios programavimo aplinkos (Visual Studio, IntelliJ...) atlieka pastovią statinę analizę tam, kad programuotojai pamatytų potencialias klaidas prieš sistemos startą. 
 
 Statinė analizė padeda aptikti:
 \begin{itemize}
@@ -169,7 +169,7 @@ Išorinis pažeidžiamumų skenavimas aptiks:
 \subsection{Vidinių pažeidžiamumų skenavimas}
 \label{sec:example}
 
-Vidinis pažeidžiamumo patikrinimas atliekamas iš organizacijos perimetro gynybos \cite{asbjornslett1999assess}. Jos tikslas yra aptikti pažeidžiamumus, kuriuos galėtų išnaudoti įsilaužėliai arba nepatenkinti darbuotojai, sėkmingai įsiskverbiantys į perimetro gynybą, arba turintys teisėtą prieigą prie organizacijos tinklo.
+Vidinis pažeidžiamumo patikrinimas atliekamas iš organizacijos perimetro gynybos. Jos tikslas yra aptikti pažeidžiamumus, kuriuos galėtų išnaudoti įsilaužėliai arba nepatenkinti darbuotojai, sėkmingai įsiskverbiantys į perimetro gynybą, arba turintys teisėtą prieigą prie organizacijos tinklo\cite{asbjornslett1999assess}.
 
 Vidinių pažeidžiamumų skenavimas aptiks:
 \begin{itemize}
@@ -220,7 +220,7 @@ Argumentai prieš atvirą kodą:
 Argumentai už atviro kodo programinę įrangą:
 \begin{itemize}
 	\item Atidarant kodą visiems, yra lengviau identifikuoti problemas nei uždarant kodą. Atidarius kodą visiems, jį vertina ne tik kūrėjai, bet ir vartotojai bei kitos grupės žmonių, kurių dėka spragos yra pamatomos daug anksčiau lyginant su uždaro kodo produktais. Klaidas pastebėti yra žymiai lengviau dėl bendruomenės, išvengiama rizika, kad spraga bus nepastebėta ilgą laiką, kol ją išnaudos nuostolio siekiantys žmonės\cite{10.5555/580808}.
-	\item Žmonės, naudojantys atviro kodo programinę įrangą, galės patys surasti ir sutvarkyti problemas kilusias su produktu. Tuomet jie gali savo pataisymus siūlyti į pagrindinę produkto repozitoriją, tokie pataisymai bus patvirtinti ir atsiras pačiame produkte, tuomet kiti žmonės galės parsisiųsti šiuos pakeitimus, taip padidindami savo sistemos saugumą. "\textit{Linus's law: Given enough eyeballs, all bugs are shallow}\cite{Meneely:2009:SOS:1653662.1653717}"
+	\item Žmonės, naudojantys atviro kodo programinę įrangą, galės patys surasti ir sutvarkyti problemas kilusias su produktu. Tuomet jie gali savo pataisymus siūlyti į pagrindinę produkto repozitoriją, tokie pataisymai bus patvirtinti ir atsiras pačiame produkte, tuomet kiti žmonės galės parsisiųsti šiuos pakeitimus, taip padidindami savo sistemos saugumą. "\textit{Linus's law: Given enough eyeballs, all bugs are shallow}"\cite{Meneely:2009:SOS:1653662.1653717}.
 \end{itemize}
 
 \subsubsection{Uždaro kodo programinė įranga}
@@ -240,7 +240,7 @@ Kuri programinė įranga yra saugesnė: atvirojo ar uždarojo kodo? Galima teigt
 
 \subsection{Sistemos auditavimas}
 
-Sistemos auditavimo metodikų daug ir kuo daugiau jų taikoma, tuo daugiau naudos jos gali atnešti sistemos saugumui. Sistemų auditavimas susideda ne vien iš skenavimo ar analizės metodų, bet ir iš paprastų kasdienių konfiguravimo ar programavimo darbų.
+Sistemos auditavimo metodikų yra daug ir kuo daugiau jų taikoma, tuo daugiau naudos jos gali atnešti sistemos saugumui. Sistemų auditavimas susideda ne vien iš skenavimo ar analizės metodų, bet ir iš paprastų kasdienių konfiguravimo ar programavimo darbų.
 
 \subsubsection{Sistemos ir jos komponentų atnaujimas} 
 
@@ -260,7 +260,7 @@ Pažeidžiamumų ir programinių klaidų analizės metodų taikymas padėtų ras
 Kurimo darbo metu buvo vadovaujamasi šiuo darbo tikslu: sukurti saugų pažeidžiamumų skenavimo įrankį, kuris veiktų iš tam tikros slepiamos vietos, skenuotų internetinę
 svetainę bei jos failus, aptiktų pažeidžiamumus ar infekuotus failus ir pateiktų klientui informaciją apie skenavimo rezultatus. Šis tikslas pasiektas tokiais veiksmais:
 \begin{itemize}
-	\item Užtikrintas saugus ryšys tarp įrankio ir skenuojamos sistemos;
+%	\item Užtikrintas saugus ryšys tarp įrankio ir skenuojamos sistemos;
 	\item Sukurta saugi aplinka, į kurią galima būtų siųsti potencialiai užkrėtus failus;
 	\item Išorinis sistemos skenavimas bandant išgauti kuo daugiau informacijos iš sistemos, ieškant atidarytų prievadų ar neveikenčių sistemų skenuojamoje sistemoje;
 	\item Tikrinamas pats svetainės adresas, ar yra saugu eiti į jį;
@@ -330,7 +330,7 @@ Pilnoje saugios aplinkos įgyvendinimo schemoje, kuri yra \ref{fig:docker} pavyz
 
 \subsection{Įgyvendinami skenavimo metodai}
 
-Iš viso yra įgyvendinti keturi skenavimo metodai. Šie metodai aprėpia didelį skaičių potencialių pažeidžiamumų, taip pat su šiais metodais galima aptikti dažniausiai esančius pažeidžiamumus, kurie pasitaiko sistemose. Metodai apima atvejus ne vien tik situacijas, kai esantys pažeidžiamumai yra aptinkami prieš įsilaužimą, bet apima ir įsilaužimo ir po ųsilaužimo situacijas.
+Iš viso yra įgyvendinti keturi skenavimo metodai. Šie metodai aprėpia didelį skaičių potencialių pažeidžiamumų, taip pat su šiais metodais galima aptikti dažniausiai esančius pažeidžiamumus, kurie pasitaiko sistemose. Metodai apima atvejus ne vien tik situacijas, kai esantys pažeidžiamumai yra aptinkami prieš įsilaužimą, bet apima ir įsilaužimo ir po įsilaužimo situacijas.
 
 \subsubsection{Išorinis sistemos skenavimas}
 \label{sec:scanOutside}
@@ -411,7 +411,7 @@ Proceso veikimas pavaizduotas \ref{fig:2Container} pavyzdyje ir jame matome, kad
 
 \subsection{Įrankio skenavimo metodų platforma}
 
-Įrankis yra puikiai pritaikytas naudoti bet kokioje sistemoje, taip pat jį ypač patogu pritaikyti bet kokiame scenarijuje. Šis įrankis yra plačiai naudojamas kibernetinio saugumo bendruomeneje ir taip pat yra ypač efektyvus atliekant tinklo skanavimus ar analizę. Atsisžvelgus į šiuos faktus, šis įrankis tampa butinybė bet kokioje spragų skanavimo sistemoje dėl savo didelio potencialo ir bendruomenės pasitikėjimo.
+Įrankis yra puikiai pritaikytas naudoti bet kokioje sistemoje, taip pat jį ypač patogu pritaikyti bet kokiame scenarijuje. Šis įrankis yra plačiai naudojamas kibernetinio saugumo bendruomeneje ir taip pat yra ypač efektyvus atliekant tinklo skenavimus ar analizę. Atsisžvelgus į šiuos faktus, šis įrankis tampa butinybė bet kokioje spragų skenavimo sistemoje dėl savo didelio potencialo ir bendruomenės pasitikėjimo.
 \begin{algorithm}
 	\caption{Įrankio platformos pseudo kodas}
 	\label{alg:pseudo}
@@ -424,14 +424,14 @@ Proceso veikimas pavaizduotas \ref{fig:2Container} pavyzdyje ir jame matome, kad
 		\STATE $ThreadPool \gets Scan3(ScanRequest)$
 		\STATE $ThreadPool \gets Scan4(ScanRequest)$
 		\STATE $ThreadPool. Wait For All$
-		\ENDFOR
 		\STATE $Database \gets ThreadPool.Results$
+		\ENDFOR
 		\ENDIF
 	\end{algorithmic}
 \end{algorithm}
 
 
-Įrankio kurimo metu buvo sukurta platforma, kuri yra integruota į patį įranki. Platforma yra skirta lengvai pridėti naujus skenavimo būdus ir funkcijas. Iš šios platformos yra startuojami visi jau esantis skenavimo metodai. Naujų skenavimo metodu pridėjimas vyksta programiškai, bet pati platforma parašyta taip, kad norint pridėti kažka naujo, nereikia programuoti visko iš naujo. Šios platformos kodą galime matyti \ref{alg:pseudo} algoritme. Iš pradžių pasiimame visas skenavimo užklausas, kurios dar nebuvo vykdytos iš duomenų bazės, tuomet iteruojame per kiekviena iš jų ir parareliai paleidžiame visus skenavimo metodus. Kai visi skenavimo metodai yra paleisti, laukiame, kol visi jie pasibaigs. Visiems skenavimams pasibaigus, resultatus patalpiname į duomenų bazę.
+Įrankio kurimo metu buvo sukurta platforma, kuri yra integruota į patį įranki. Platforma yra skirta lengvai pridėti naujus skenavimo būdus ir funkcijas. Iš šios platformos yra startuojami visi jau esantis skenavimo metodai. Naujų skenavimo metodu pridėjimas vyksta programiškai, bet pati platforma parašyta taip, kad norint pridėti kažka naujo, nereikia programuoti visko iš naujo. Šios platformos kodą galime matyti \ref{alg:pseudo} algoritme. Iš pradžių pasiimame visas skenavimo užklausas, kurios dar nebuvo vykdytos iš duomenų bazės, tuomet iteruojame per kiekviena iš jų ir parareliai paleidžiame visus skenavimo metodus. Kai visi skenavimo metodai yra paleisti, laukiame, kol visi jie pasibaigs. Visiems skenavimamo metodams pasibaigus, resultatus patalpiname į duomenų bazę.
 
 
 \subsection{Aptiktini pažeidžiamumai}
@@ -466,12 +466,12 @@ Proceso veikimas pavaizduotas \ref{fig:2Container} pavyzdyje ir jame matome, kad
 
 Kurimo metu buvo planuota panaudoti trečios šalies įrankį SqlMap. Šio įrankio paskirtis yra ieškoti ar internetinė svetainė yra pažeidžiama SQL injekcijos atakoms. Tokio tipo skenavimui reikėtų sukurti internetinės svetaines puslapių kodo funkciją, kuri svetainės puslapyje ieško dinaminių nuorodų. Šios nuorodos priema parametrus savo nuorodose. Tuomet SqlMap įrankis bando į šiuos parametrus įdėti manipuliuotą tekstą, kuris įvykdytų užklausą duomenų bazeje. Šio įrankio funkcionalumo įgyvendinimas šioje skenavimo sistemoje tapo perdaug problematiškas ir laiko užimantis dėl pačios funkcijos, kuri ieškotų tokių įveščių internetinėje svetainėje. Dėl šios priežasties SqlMap funkcionalumo atsisakyta.
 
-Kurimo metu taip pat buvo užsibrėžta įgyvendinti statinę analizę. Šis tikslas buvo įgyvendintas nepilnai, patys failai buvo tikrinami žinomų kenkėjiškų programų duomenų bazėje, bet internetinės svetainės kodas nebuvo tikrinamas. Šio tikslo atsisakyta ir statinės analizės technikų įgyvendinimai perkelti į ateities darbus. Šio atsisakymo priežastis yra ta, kad kiekvienai programavimo kalbai reikalingas atskiras statinės analizės įgyvendinimas, kieviena kalba yra kitokia, jos funkcionalumas ir sintaksė pat pat, dėl šios priežasties tokio funkcionalumo kurimo kaštai stipriai didėja.
+Kurimo metu taip pat buvo užsibrėžta įgyvendinti statinę analizę. Šis tikslas buvo įgyvendintas nepilnai, patys failai buvo tikrinami žinomų kenkėjiškų programų duomenų bazėje, bet internetinės svetainės kodas nebuvo tikrinamas. Šio tikslo buvo atsisakyta. Šio atsisakymo priežastis yra ta, kad kiekvienai programavimo kalbai reikalingas atskiras statinės analizės įgyvendinimas, kieviena kalba yra kitokia, jos funkcionalumas ir sintaksė pat pat, dėl šios priežasties tokio funkcionalumo kurimo kaštai stipriai didėja.
 
 
  %Conclusions section
  
- \sectionWithoutNumber{Rezultatai}{}
+ \subsection{Darbo rezultatų apibendrinimas}
  
  Sukurtas saugus pažeidžiamumų skaitytuvas sistemų auditavimui naudojantis naujausiomis technologijos. Pažeidžiamumų skaitytuvas yra modulinis, turi tris modulius: Internetinę svetainę, duomenų bazę ir servisą, kuris atlieka visus skenavimus. Visos trys dalys geba veikti atskirai, taip pridedant papildomą saugumo ir stabilumo sluoksnį.
  
@@ -491,9 +491,10 @@ Kurimo metu taip pat buvo užsibrėžta įgyvendinti statinę analizę. Šis tik
 Ateities darbų plano gairės:
 
 \begin{itemize}
-	\item Įgyvendinti statinę analizę, parsisiuntus internetinės svetainės kodą, jį analizuoti priklausomai nuo to, kokia kalba jis parašytas;
-	\item Įgyvendinti svetainės dinaminę analizę, parsisiuntus internetinę svetainę, automatizuoti jos paleidimą ir paleidus įgyvendinti dinaminę analizę.
-	\item Įgyvendinti vidinių pažeidžiamumų skenavimą, prisijungti prie sistemos naudojans SSH, paleisti scriptus, kurie randa sistemos spragas.
+	\item Įgyvendinti statinę analizę, kuri parsisiunčia internetinės svetainės kodą, jį analizuoti priklausomai nuo to, kokia kalba jis parašytas;
+	\item Įgyvendinti svetainės dinaminę analizę, kuri parsisiuntus internetinę svetainę ją paleiždia lokaliai ir įgyvendina dinaminę analizę;
+	\item Įgyvendinti vidinių pažeidžiamumų skenavimą, kuris prisijungia prie sistemos naudojant SSH ir paleidžia skriptus, kurie randa sistemos spragas;
+	\item Įgyvendinti skenavimą, kuris aptiktų svetainėje spragas, kurios leistų įgyvendinti SQL injekcijos atakas.
 \end{itemize}
 
 

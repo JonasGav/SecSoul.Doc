@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.21)  11 JAN 2020 20:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.21)  12 JAN 2020 17:24
 entering extended mode
 **./mainDocument.tex
 (mainDocument.tex
@@ -1048,7 +1048,7 @@ LaTeX Font Info:    Font shape `L7x/utm/bx/n' in size <14.4> not available
 (Font)              Font shape `L7x/utm/b/n' tried instead on input line 70.
  [9]
 [10] [11] [12] [13] [14] [15] [16]
-<figs/arch1lt.pdf, id=384, 377.49028pt x 254.8722pt>
+<figs/arch1lt.pdf, id=383, 377.49028pt x 254.8722pt>
 File: figs/arch1lt.pdf Graphic file (type pdf)
 <use figs/arch1lt.pdf>
 Package pdftex.def Info: figs/arch1lt.pdf  used on input line 278.
@@ -1058,7 +1058,7 @@ Package pdftex.def Info: figs/arch1lt.pdf  used on input line 278.
 pdfTeX warning: pdflatex.exe (file ./figs/arch1lt.pdf): PDF inclusion: invalid 
 other resource which is no dict (key 'ProcSets', type <array>); ignored.
 >]
-<figs/Activitylt.pdf, id=401, 385.44pt x 355.3275pt>
+<figs/Activitylt.pdf, id=400, 385.44pt x 355.3275pt>
 File: figs/Activitylt.pdf Graphic file (type pdf)
 <use figs/Activitylt.pdf>
 Package pdftex.def Info: figs/Activitylt.pdf  used on input line 292.
@@ -1068,7 +1068,7 @@ Package pdftex.def Info: figs/Activitylt.pdf  used on input line 292.
 pdfTeX warning: pdflatex.exe (file ./figs/Activitylt.pdf): PDF inclusion: inval
 id other resource which is no dict (key 'ProcSets', type <array>); ignored.
 >]
-<figs/docker.pdf, id=434, 385.44pt x 277.035pt>
+<figs/docker.pdf, id=433, 385.44pt x 277.035pt>
 File: figs/docker.pdf Graphic file (type pdf)
 <use figs/docker.pdf>
 Package pdftex.def Info: figs/docker.pdf  used on input line 306.
@@ -1078,7 +1078,7 @@ Package pdftex.def Info: figs/docker.pdf  used on input line 306.
 pdfTeX warning: pdflatex.exe (file ./figs/docker.pdf): PDF inclusion: invalid o
 ther resource which is no dict (key 'ProcSets', type <array>); ignored.
 >] [21]
-<figs/Fulllt.pdf, id=479, 399.41219pt x 313.17pt>
+<figs/Fulllt.pdf, id=478, 399.41219pt x 313.17pt>
 File: figs/Fulllt.pdf Graphic file (type pdf)
 <use figs/Fulllt.pdf>
 Package pdftex.def Info: figs/Fulllt.pdf  used on input line 355.
@@ -1088,12 +1088,12 @@ Package pdftex.def Info: figs/Fulllt.pdf  used on input line 355.
 pdfTeX warning: pdflatex.exe (file ./figs/Fulllt.pdf): PDF inclusion: invalid o
 ther resource which is no dict (key 'ProcSets', type <array>); ignored.
 >]
-<figs/1Containerlt.pdf, id=502, 284.02109pt x 139.4811pt>
+<figs/1Containerlt.pdf, id=501, 284.02109pt x 139.4811pt>
 File: figs/1Containerlt.pdf Graphic file (type pdf)
 <use figs/1Containerlt.pdf>
 Package pdftex.def Info: figs/1Containerlt.pdf  used on input line 386.
 (pdftex.def)             Requested size: 422.52057pt x 207.51207pt.
-<figs/2Containerlt.pdf, id=506, 364.48169pt x 139.4811pt>
+<figs/2Containerlt.pdf, id=505, 364.48169pt x 139.4811pt>
 File: figs/2Containerlt.pdf Graphic file (type pdf)
 <use figs/2Containerlt.pdf>
 Package pdftex.def Info: figs/2Containerlt.pdf  used on input line 395.
@@ -1103,7 +1103,7 @@ Package pdftex.def Info: figs/2Containerlt.pdf  used on input line 395.
 pdfTeX warning: pdflatex.exe (file ./figs/1Containerlt.pdf): PDF inclusion: inv
 alid other resource which is no dict (key 'ProcSets', type <array>); ignored.
 >]
-<figs/3Containerlt.pdf, id=534, 284.02109pt x 139.4811pt>
+<figs/3Containerlt.pdf, id=533, 284.02109pt x 139.4811pt>
 File: figs/3Containerlt.pdf Graphic file (type pdf)
 <use figs/3Containerlt.pdf>
 Package pdftex.def Info: figs/3Containerlt.pdf  used on input line 404.
@@ -1121,26 +1121,26 @@ alid other resource which is no dict (key 'ProcSets', type <array>); ignored.
 >] [25] [26] [27] (conclusions.tex) [28] [29] (mainDocument.bbl [30
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 512.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 513.
  [31]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 512.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 513.
 
 (mainDocument.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 512.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 512.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 513.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 513.
 Package rerunfilecheck Info: File `mainDocument.out' has not changed.
-(rerunfilecheck)             Checksum: 0C075C96B72F50BD1A58CDFC3A5E7B29;8355.
+(rerunfilecheck)             Checksum: 51D37367445E40DB6DFBC0B20B48E054;8477.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 512.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 513.
  ) 
 Here is how much of TeX's memory you used:
- 28828 strings out of 492895
- 503173 string characters out of 3123735
- 562800 words of memory out of 3000000
- 32316 multiletter control sequences out of 15000+200000
+ 28827 strings out of 492895
+ 503175 string characters out of 3123735
+ 562765 words of memory out of 3000000
+ 32315 multiletter control sequences out of 15000+200000
  552428 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,11n,77p,1497b,871s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1156,9 +1156,9 @@ pdfTeX warning: pdflatex.exe (file C:/Users/Johny/AppData/Local/Programs/MiKTeX
  2.9/fonts/type1/urw/times/utmr8a.pfb): glyph `ff' undefined
 ><C:/Users/Johny/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on mainDocument.pdf (31 pages, 533680 bytes).
+Output written on mainDocument.pdf (31 pages, 534629 bytes).
 PDF statistics:
- 663 PDF objects out of 1000 (max. 8388607)
+ 662 PDF objects out of 1000 (max. 8388607)
  147 named destinations out of 1000 (max. 500000)
  393 words of extra memory for PDF output out of 10000 (max. 10000000)
 

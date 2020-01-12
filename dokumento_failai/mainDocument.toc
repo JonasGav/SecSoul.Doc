@@ -39,9 +39,9 @@
 \contentsline {subsection}{\numberline {4.7}Aptiktini pa\IeC {\v z}eid\IeC {\v z}iamumai}{25}{subsection.4.7}% 
 \contentsline {subsection}{\numberline {4.8}\IeC {\k I}gyvendinti u\IeC {\v z}daviniai}{26}{subsection.4.8}% 
 \contentsline {subsection}{\numberline {4.9}Tr\IeC {\=u}kumai}{26}{subsection.4.9}% 
-\contentsline {section}{\nameref {sec:}}{27}{section*.12}% 
-\contentsline {section}{\nameref {sec:conclu}}{28}{section*.13}% 
-\contentsline {paragraph}{I\IeC {\v s}vados}{28}{section*.14}% 
-\contentsline {paragraph}{Rekomendacijos}{28}{section*.15}% 
-\contentsline {section}{\nameref {sec:future}}{29}{section*.16}% 
-\contentsline {section}{Literat\IeC {\=u}ros \IeC {\v s}altiniai}{30}{section*.17}% 
+\contentsline {subsection}{\numberline {4.10}Darbo rezultat\IeC {\k u} apibendrinimas}{26}{subsection.4.10}% 
+\contentsline {section}{\nameref {sec:conclu}}{28}{section*.12}% 
+\contentsline {paragraph}{I\IeC {\v s}vados}{28}{section*.13}% 
+\contentsline {paragraph}{Rekomendacijos}{28}{section*.14}% 
+\contentsline {section}{\nameref {sec:future}}{29}{section*.15}% 
+\contentsline {section}{Literat\IeC {\=u}ros \IeC {\v s}altiniai}{30}{section*.16}% 
